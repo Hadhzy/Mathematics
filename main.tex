@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{mathptmx}
+\usepackage{hyperref}
+
+
+\author{Gábor Hadházy and Tamás Hadházy}
+\title{Mathematics}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{Algebra}
+The first chapter is about algebra. It will cover the topics that was written by Gábor Hadházy and Tamás Hadházy.
+\section{Exponentiation}
+When starting out with Exponentiation it is important first to understand the different parts of an exponential expression, so let's consider:
+$$b^x = \underbrace{b \cdot b \cdot ... \cdot b}_{x \ times}$$
+\begin{itemize}
+  \item $b$ is the \textbf{base}.
+  \item $x$ is the \textbf{exponent}.
+\end{itemize}
+
+As a reminder $ x^0 = 1 $
+
+Let's discuss the different rules of Exponentiation:
+\subsection{Product Rule}
+To find the product of two exponential expression with the same base, add the exponents. 
+$$ x^{n} \cdot x^{m} = x^{n+m} $$
+
+\subsection{Quotient Rule}
+When two exponential expressions with the same base are divided,  to find their quotient subtract their exponents. 
+$$ \frac{x^n}{x^m} = x^{n-m} $$
+
+\subsection{Power Rule}
+When you raise an power to a power in an exponential expression to get the product, multiply the exponents
+$$ (x^{n})^{m} = x^{n \cdot m} $$ 
+$$ OR $$
+$$ (x^{n})^{m} = \underbrace{x^n \cdot ... \cdot x^n}_{m \ times} $$
+Here it is proven that the power rule is simply just the product rule.
+
+\subsection{Negative Exponents}
+When dealing with negative exponents this equation will apply: 
+$$ x^{-n} = \frac{1}{x^n} $$
+
+Since, 
+$$ \frac{1}{x} = \frac{x^0}{x^1} = x^{0-1} = x^{-1} $$
+It is important to note that this is just only one way of proving this, there are a couple more. 
+
+\subsection{Fractional Exponents}
+$$ \large x^{\frac{1}{n}} = \sqrt[n]{x} $$
+The proof of this can be found in the next section \hyperref[sec:radicals]{Radicals(click to redirect)}.
+
+\subsection{Additional rules}
+Distribute an exponent over a product: $(x \ y)^{n} = x^{n} \ y^{n}$ \\
+Distribute an exponent over a quotient: $  (\frac{a}{b})^{n} = \frac{a^{n}}{b^{n}}$
+
+\newpage
+\label{sec:radicals}
+\section{Radicals}
+$$ \large \sqrt[n]{x} $$
+\begin{itemize}
+  \item $x$ is the \textbf{radicand}.
+  \item $n$ is the \textbf{index}(nth root).
+  \item $\large \sqrt[n]{x}$ expression is the \textbf{radical}
+\end{itemize}
+
+As promised let's look at the fractional exponent equation. If $n$ is a positive integer that is greater than $1$ and a is a real number then,
+$$ \sqrt[n]{a} = a^{\frac{1}{n}} $$
+
+We are often referring the left side of the equation as the \textbf{radical form} and the right side of the equation as the \textbf{exponent form}
+
+\subsubsection{Proof}
+In order to prove this equation we can establish first this: 
+$$ (a^{\frac{1}{n}})^{n} = a^{n \cdot \frac{1}{n}} = a^{\frac{n}{n}} = a $$
+Let's take an example to avoid confusion: 
+$$ (9^{\frac{1}{2}})^2 = 9^{\frac{1}{2} \cdot2} = 9^{\frac{2}{2}} = 9 $$
+
+To put this into words $ 9^{\frac{1}{2}} $ is the number that when squared will return back $ 9 $. In other words this is exactly what it meant by the root(in this case square root) which will return back the number that when squared it will be 9. Therefore: 
+$$ 9^{\frac{1}{2}} =  \sqrt[2]{9} = 3 $$
+
+Since,
+$$ (3)^2 = 9 = (9^{\frac{1}{2}})^2 $$
+
+Therefore the equation has been proven: 
+$$ \sqrt[n]{a} = a^{\frac{1}{n}} $$
+
+It is very important to note a misconception here. The index is required in these radical expressions to make sure that we correctly evaluate the radical. There is one exception to this rule and that is square root.
+$$ \sqrt[2]{a} = \sqrt[]{a} $$
+In every other cases we \textbf{must} define the index, because otherwise it will be considered as a square root, Whenever working with square roots the index can be omitted.
+
+\subsubsection{General rational exponent}
+Since, $ a^{\frac{1}{n}} = \sqrt[n]{a} $.
+Let's establish the general rational exponent in terms of radicals as follows. 
+$$ a^{\frac{m}{n}} = (a^{\frac{1}{n}}) ^{m} = (\sqrt[n]{a})^m $$
+$$ OR $$
+$$ a^{\frac{m}{n}} = (a^m) ^{\frac{1}{n}} = \sqrt[n]{a^m} $$
+
+Since being aware of the \textbf{Associative Property of Multiplication}, the order of the multiplication can be changed. 
+
+Therefore, 
+$$ a^{\frac{m}{n}} = \sqrt[n]{a^m} $$
+
+
+\section{Factorials}
+\section{Summations}
+\section{Scientific Notation}
+\end{document}
