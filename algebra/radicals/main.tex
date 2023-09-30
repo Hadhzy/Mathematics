@@ -1,0 +1,82 @@
+\label{sec:radicals}
+\section{Radicals}
+$$ \large \sqrt[n]{x} $$
+\begin{itemize}
+  \item $x$ is the \textbf{radicand}.
+  \item $n$ is the \textbf{index}(nth root).
+  \item $\large \sqrt[n]{x}$ expression is the \textbf{radical}
+\end{itemize}
+
+As promised let's look at the fractional exponent equation. If $n$ is a positive integer that is greater than $1$ and a is a real number then,
+$$ \sqrt[n]{a} = a^{\frac{1}{n}} $$
+
+We are often referring the left side of the equation as the \textbf{radical form} and the right side of the equation as the \textbf{exponent form}
+
+\subsubsection{Proof}
+In order to prove this equation we can establish first this: 
+$$ (a^{\frac{1}{n}})^{n} = a^{n \cdot \frac{1}{n}} = a^{\frac{n}{n}} = a $$
+Let's take an example to avoid confusion: 
+$$ (9^{\frac{1}{2}})^2 = 9^{\frac{1}{2} \cdot2} = 9^{\frac{2}{2}} = 9 $$
+
+To put this into words $ 9^{\frac{1}{2}} $ is the number that when squared will return back $ 9 $. In other words this is exactly what it meant by the root(in this case square root) which will return back the number that when squared it will be 9. Therefore: 
+$$ 9^{\frac{1}{2}} =  \sqrt[2]{9} = 3 $$
+
+Since,
+$$ (3)^2 = 9 = (9^{\frac{1}{2}})^2 $$
+
+Therefore the equation has been proven: 
+$$ \sqrt[n]{a} = a^{\frac{1}{n}} $$
+
+It is very important to note a misconception here. The index is required in these radical expressions to make sure that we correctly evaluate the radical. There is one exception to this rule and that is square root.
+$$ \sqrt[2]{a} = \sqrt[]{a} $$
+In every other cases we \textbf{must} define the index, because otherwise it will be considered as a square root, Whenever working with square roots the index can be omitted.
+
+\subsubsection{General rational exponent}
+Since, $ a^{\frac{1}{n}} = \sqrt[n]{a} $.
+Let's establish the general rational exponent in terms of radicals as follows. 
+$$ a^{\frac{m}{n}} = (a^{\frac{1}{n}}) ^{m} = (\sqrt[n]{a})^m $$
+$$ OR $$
+$$ a^{\frac{m}{n}} = (a^m) ^{\frac{1}{n}} = \sqrt[n]{a^m} $$
+
+Since being aware of the \textbf{Associative Property of Multiplication}, the order of the multiplication can be changed. 
+
+Therefore, 
+$$ a^{\frac{m}{n}} = \sqrt[n]{a^m} $$
+
+\subsection{Properties of radicals}
+\begin{itemize}
+  \item $\sqrt[n]{a^n} = a$ \ This is simply true because when trying to find the $n$th root of a number and  also raising the number to that power then that's simply will be equal to the number.  \\
+Consider this as an example,
+$$ \sqrt[]{9^2} = \sqrt[]{81} = 9$$
+   \item $ \sqrt[n]{ab} = \sqrt[n]{a} \sqrt[n]{b} $ \\
+   To prove this consider this, \\
+    1. Start with the left-hand side (LHS) of the equation,
+    $ \sqrt[n]{ab} $ Using the definition of the nth root:
+    $ \sqrt[n]{ab} = (ab)^{\frac{1}{n}} $ \\
+    2. Next apply the product rule of exponents, which states that $ a^m \cdot a^n = a^{m+n} $ Therefore, $ (ab)^{\frac{1}{n}} = a^{\frac{1}{n}} \cdot b^{\frac{1}{n}} $ \\ 
+    3. Now, rewrite the exponents as radicals:
+    $ a^{\frac{1}{n}} $ is equivalent to $ \sqrt[n]{a} $ and $ b^{\frac{1}{n}} $ is equivalent to $ \sqrt[n]{b} $ \\
+    4. So, we have: $ a^{\frac{1}{n}} \cdot b^{\frac{1}{n}} = \sqrt[n]{a} \cdot \sqrt[n]{b} $ \\
+    5. Finally this proves that: $ \sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b} $
+    \item $ \large \sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}} $ To prove this consider this, \\
+    1. As previously Start with the left-hand side (LHS) of the equation: $ \sqrt[n]{\frac{a}{b}} $ \\
+    2. Now using the definition of the nth root: $ \sqrt[n]{\frac{a}{b}} = \left(\frac{a}{b}\right)^{\frac{1}{n}} $ \\
+    3. Apply the power rule of the exponents which states that: \\ $ (a^m)^{\frac{1}{n}} = a^{m \cdot \frac{1}{n}} = a^{\frac{m}{n}}$, Therefore when we are dealing with a fraction as the base it is the same when dealing with numbers that are not fractions: 
+$$ \left(\frac{a}{b}\right)^{\frac{1}{n}} = \frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}} $$ Since, \\
+$$ (\frac{a}{b})^c = \frac{a^c}{b^c} $$ \\
+With an example: $ (\frac{a}{b})^2 = \frac{a}{b} \cdot \frac{a}{b} = \frac{a^2}{b^2} $ \\
+	4. Now rewrite the exponents as radicals: $ a^{\frac{1}{n}} $ is equivalent to $ \sqrt[n]{a} $ and  $b^{\frac{1}{n}}$ is equivalent to $ \sqrt[n]{b} $ \\
+	5. So, we have: 
+	$$ \frac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}} $$ \\
+	6. Finally, this proves that: 
+	$$ \sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}} $$ \\
+	\\
+	
+	\item Also note that while we can “break up” products and quotients under a radical we can’t do the same thing for sums or differences. In other words,
+	$$ \sqrt[n]{a+b} \neq \sqrt[n]{a}+ \sqrt[n]{b}  $$ 
+	$$ AND $$
+	$$ \sqrt[n]{a-b} \neq \sqrt[n]{a}- \sqrt[n]{b} $$ \\
+These can simply be proven by examples, 
+$$ 5 = \sqrt25 = \sqrt{9+16} \neq \sqrt9 + \sqrt16 = 3+4 = 7 $$
+
+\end{itemize}

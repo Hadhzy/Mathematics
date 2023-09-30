@@ -1,0 +1,56 @@
+\section{Factorials}
+In mathematics, the factorial of a non-negative integer(whole number (not a fractional number) that can be positive, negative, or zero.) $ n $, denoted by $ n! $, is the product of all positive integers less than or equal to $ n $ \\
+
+$$ 5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 123 $$ \\
+Generically expressing, 
+$$ n! = n \cdot (n-1) \cdot (n-2) \cdot (n-3) \cdot ... \cdot 3 \cdot 2 \cdot 1 $$
+
+\subsection{Operations with factorials}
+Let's clarify a couple of easy examples, 
+$$ 2! + 3! = 2 \cdot 1 + 3 \cdot 2 \cdot 1 = 8 $$ 
+$$ 3! 4! = 3 \cdot 2 \cdot 1 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 144 $$ \
+When it comes to a fraction of factorials there are some tricks to implement: 
+$$ \frac{9!}{7!} = \frac{9 \cdot 8 \cdot 7!}{7!} = 9 \cdot 8 = 72$$
+Since, $ 7! = 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2\cdot 1 $ \\
+Consider a similar example: 
+$$ \frac{4!5!}{6!} = \frac{(4 \cdot 3 \cdot 2 \cdot 1)(5!)}{6 \cdot 5!} = \frac{24}{6} = 4 $$ \\ 
+Also make sure to note these rules:
+$$ a! \cdot b! \neq (a + b)! $$ 
+
+This rule applies for addition, subtraction, and division as well. 
+So, 
+$$ (a!)(b!) \neq (a+b)! $$
+$$ \frac{(a!)}{(b!)} \neq (a-b)! $$
+$$ (a!) - (b!) \neq (a-b)! $$
+
+\subsection{Algebraic Expressions with factorial}
+When dealing with different concepts it is always very important to establish generic / general equations. \\ 
+For example let's consider this equation:
+$$ \frac{(n+1)!}{n!} = n+1 $$ 
+
+In order to prove this equation there can be two different approaches.
+\subsubsection{Proof 1 - Easier and more genuine way of proving it}
+This way is the easier way but this doesn’t prove it algebraically/mathematically it just only takes two example and assume that the general equation \textbf{must} be true. 
+$$ \frac{(n+1)!}{n!} = n+1 $$
+$$ \frac{8!}{7!} = \frac{8 \cdot \cancel{7!}}{\cancel{7!}} = 8 $$
+This very easily proves it, however when dealing with research or more advanced mathematics this is not a valid proof. Everything has to be proved algebraically and mathematically.
+
+\subsubsection{Proof 2 - Mathematically proven}
+Before seeing the actual proof equation, let's establish a general equation for factorial.
+$$ (n+1)! = (n+1) \cdot n! $$
+This is true because of the definition of factorial. \\ Meaning that $ (n+1)! = (n+1) \cdot n \cdot (n-1) \cdot (n-2) \cdot ... \cdot 3 \cdot 2 \cdot 1 $ \\
+Therefore, 
+$$ \frac{(n+1)!}{n!} = \frac{(n+1) \cdot \cancel{n!}}{\cancel{n!}} = n+1 $$
+With subtraction,
+$$ \frac{(n-1)!}{n!} = \frac{\cancel{(n-1)!}}{n \cdot \cancel{(n-1)!}} = \frac{1}{n} $$
+
+Obviously, different numbers could have been used other than $ 1 $. 
+So for example,
+$$ \frac{(n+2)!}{n!} = \frac{(n+2) \cdot (n+1) \cdot \cancel{(n)!} }{\cancel{n!}} = (n+2)(n+1) $$
+$$ \frac{(2n + 1)!}{(2n)!}  = \frac{(2n + 1) \cdot \cancel{(2n)!}}{\cancel{(2n)!}} = 2n + 1 $$
+
+With this in mind, working with factorials algebraically shouldn't cause any problem. 
+
+\subsection{Other use case of factorial}
+Factorial can be used in many different ways. For example in probability, it can be used for combinations. Let's say that we have four different colours and we have to choose four of them. How many different combinations can we have? 
+$$ 4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24$$
