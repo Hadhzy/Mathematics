@@ -1,0 +1,97 @@
+\section{Linear Equations}
+
+A linear equation is an equation in which the highest power of the variable is always 1. It is also known as a one-degree equation. 
+Additionally A linear equation is an equation that can be written as the sum of numbers(coefficients) times variables, added up to equal to a number.
+
+For example. $ 2x + 3y + 7.3z = 5 $ is a linear equation.
+
+\begin{itemize}
+    \item $4x^2 + 5x + 6 = 0$ is not a linear equation because the highest power of the variables is 2.
+    \item $ \frac{1}{3}uv + \frac{2}{3}u = \frac{3}{5}v $ is not a linear equation because it includes a product of variables.
+    \item $ 5a + 2 = 6b - \sqrt[]{2c}  $ is a linear equation because if we rearrange it, we will get: 
+    $$ 5a - 6b + \sqrt[]{2c} = -2 $$
+\end{itemize}
+
+a system of linear equations (or linear system) is a collection(set) of one or more linear equations involving the same variables
+
+For example, 
+\begin{align*}
+    3x + 2y - z &= 1 \\
+    2x - 2y + 4z &= -2 \\
+    -x + \frac{1}{2}y -z &= 0
+\end{align*}
+is a system of three equations in the three variables $x, y, z$. A solution to a linear system is an assignment of values to the variables such that all the equations are simultaneously satisfied. \\
+A solution to the system above is given by the ordered tuple.
+$$ {\displaystyle (x,y,z)=(1,-2,-2)} $$  
+\subsection{Solving systems of Linear Equations with the method of substitution}
+It is important to establish that there are limitless ways to solve systems of linear equations. 
+Example. Solve the system of linear equations(we are going to use the method of substitution): 
+\begin{align*}
+    -2a + 3b + 4c = 1 \\
+    a + b + 5c = 2 \\
+    b = 2a + c
+\end{align*}
+Firstly we already have a value for $b$ in the 3rd equation so let's just substitute it into the first two equations.
+\begin{align*}
+    &1. \quad -2a + 3(2a + c) + 4c = 1 \\
+    &2. \quad a + (2a + c) + 5c = 2 \\ 
+    &3. \quad  b = 2a + c   
+\end{align*}
+
+Let's simplify the first two equations.
+After expanding and simplifying the first two terms we will get:
+\begin{align*}
+    &1.\quad 4a + 7c = 1 \\
+    &2.\quad 3a + 6c = 2 \\
+    &3.\quad b = 2a + c      
+\end{align*}
+Notice that now we have two equations with two variables, so we can solve for $a$ and $c$.
+\\ 
+
+\begin{itemize}
+    \item In the first equation we can subtract $7c$ and then divide by $4$ to get $a$. Which will give us: 
+    \begin{align*}
+        1. \quad  a = \frac{1}{4} - \frac{7}{4}c \\
+        2. \quad 3a + 6c = 2 \\
+        3. \quad b = 2a + c
+    \end{align*}
+    \item Now that we have the value for $a$ we can substitute that into the second equation. Which will give us:
+    \begin{align*}
+        &1. \quad a = \frac{1}{4} - \frac{7}{4}c \\
+        &2. \quad 3(\frac{1}{4} - \frac{7}{4}c) + 6c = 2 \\
+        &3. \quad b = 2a + c
+    \end{align*}
+    \item Now let's simplify the second equation. After expanding and simplifying with the like terms we will get:
+    \begin{align*}
+        &1. \quad a = \frac{1}{4} - \frac{7}{4}c \\
+        &2. \quad \frac{3}{4} - \frac{21}{4}c + 6c = 2 \xrightarrow{\text{add like terms}} \frac{3}{4} + \frac{3}{4}c = 2\\
+        &3. \quad b = 2a + c
+    \end{align*}
+    \item Now that we have this, we can simply subtract $\frac{3}{4}$ then simplify it down to: 
+    $$ c = \frac{5}{3} $$ 
+    \item Since we have the value for $c$ now let's figure out the value for $a$.
+    $$ a = \frac{1}{4} - \frac{7}{4}(\frac{5}{3}) = \frac{1}{4} - \frac{35}{12} = - \frac{32}{12} = -\frac{8}{3}$$
+    Therefore, $ a = - \frac{8}{3} $
+    \item Now that we have the value for $a$ and $c$ we can substitute that into the third equation to get the \textbf{actual} value for $b$.
+    $$ b = 2(-\frac{8}{3}) + \frac{5}{3} = -\frac{16}{3} + \frac{5}{3} = -\frac{11}{3}$$
+\end{itemize}
+
+Now finally we have solved the system of linear equations and we have the values for $a, b, c$. If we'd plug them in into the original equations then it would satisfy all of them. \\ 
+We can list the values in an ordered tuple like this:
+$$ {\displaystyle (a,b,c)=(-\frac{8}{3},-\frac{11}{3},\frac{5}{3})} $$
+Now let's see another way of solving systems of linear equations.
+\subsection{Solving systems of Linear Equations with the method of elimination}
+Example. Solve the system of linear equations(we are going to use the method of elimination): 
+\begin{align*}
+    &1. \quad -2a + 3b + 4c = 1 \\
+    &2. \quad a + b + 5c = 2 \\ 
+    &3. \quad  b = 2a + c   
+\end{align*}
+Let's rearrange this system by writing each equation in the standard form, where all the variables are on the left side and the constants are on the right side.
+The first two equations are already in the standard form, but the third one is not. So let's rearrange it.
+
+\begin{align*}
+    &1. \quad -2a + 3b + 4c = 1 \\
+    &2. \quad a + b + 5c = 2 \\ 
+    &3. \quad  -2a + b - c = 0  
+\end{align*}
