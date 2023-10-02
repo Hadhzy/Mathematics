@@ -1,0 +1,60 @@
+\section{Rational Expressions}
+Rational expressions are expressions that are in the form of a fraction usually a variable in it. Like
+$$ \frac{x+2}{x^2+3}$$
+In this section we will go over adding, subtracting, dividing, and multiplying rational expressions. We will also go over simplifying rational expressions to lowest terms.
+
+\subsection{Reduce to lowest terms}
+\textbf{Example.} Simplifying $\displaystyle \frac{21}{45}$  by reducing to lowest terms. \\
+We can reduce this to lowest terms by factoring the numerator and denominator and then canceling out the common factors. So we have: 
+$$ \frac{21}{45} = \frac{\cancel{3} \cdot 7}{\cancel{3} \cdot 3 \cdot 5} = \frac{7}{3 \cdot 5} = \frac{7}{15}$$
+
+\textbf{Example.} Simplify $\displaystyle \frac{3x+6}{x^2+4x+4}$ by reducing to lowest terms. \\
+Here we can factor the numerator and denominator and then cancel out the common factors. So we have:
+
+$$ \frac{3x+6}{x^2+4x+4} = \frac{3\cancel{(x+2)}}{\cancel{(x+2)}(x+2)} = \frac{3}{x+2}$$
+
+
+Essentially when reducing to lowest terms we are trying to factor them first and then cancel out the common factors.
+
+\subsection{Multiplying and Dividing rational expressions}
+\textbf{Example.} Compute 
+
+\begin{enumerate}
+    \item $\displaystyle \frac{4}{3} \cdot \frac{2}{5}$
+    
+    Here we can just simply multiply the numerators and denominators together. So we have:
+    $$ \frac{4}{3} \cdot \frac{2}{5} = \frac{4 \cdot 2}{3 \cdot 5} = \frac{8}{15}$$
+    \item $\dfrac{\frac{4}{5}}{\frac{2}{3}}$
+    Here we can just simply multiply the numerator by the reciprocal of the denominator. So we have:
+    $$ \frac{\frac{4}{5}}{\frac{2}{3}} = \frac{4}{5} \cdot \frac{3}{2} = \frac{4 \cdot 3}{5 \cdot 2} = \frac{12}{10} = \frac{6}{5}$$
+    \item $ \displaystyle \dfrac{ \displaystyle \frac{x^2+x}{x+4}}{ \displaystyle \frac{x+1}{x^2-16}}$
+    Here we are trying to devide two rational expressions. We can do this by multiplying the numerator by the reciprocal of the denominator, then apply our factoring knowledge. So we have:
+    $$ \frac{\frac{x^2+x}{x+4}}{ \frac{x+1}{x^2-16}} = \frac{x^2+x}{x+4} \cdot \frac{x^2-16}{x+1} = \frac{(x^2+x)(x^2-16)}{(x+4)(x+1)} = \frac{x\cancel{(x+1)}\cancel{(x+4)}(x-4)}{\cancel{(x+4)}\cancel{(x+1)}} = x(x-4)$$
+\end{enumerate}
+
+\subsection{Adding and Subtracting rational expressions}
+
+\textbf{Example.} Subtract $\displaystyle \frac{7}{6} - \frac{4}{15}$ \\
+Here we can't just subtract the numerators and denominators because they are not the same. So we need to find a common denominator. We can do this by finding the least common multiple of the denominators. So we have:
+$$ \frac{7}{6} - \frac{4}{15} = \frac{7 \cdot 5}{6 \cdot 5} - \frac{4 \cdot 2}{15 \cdot 2} = \frac{35}{30} - \frac{8}{30} = \frac{27}{30} = \frac{9}{10}$$
+
+\textbf{Example.} Add $\displaystyle \frac{3}{2x+2} + \frac{5}{x^2-1}$ \\
+In order to find the least common denominator we need to factor the denominators. So we have:
+\begin{align}
+    2x+2 &= 2(x+1) \\
+    x^2-1 &= (x+1)(x-1)
+\end{align}
+
+The least common denominator is the expression that contains all the factors of the denominators. which is $2(x+1)(x-1)$. We don't need to rewrite the $(x+1)$ because it is already in the least common denominator. 
+Now we have to rewrite each of the two rational expressions by multiplying whatever is missing from the denominator in terms of the least common denominator. \\
+
+Let's first factorise the first rational expression's denaminator. 
+$$ \frac{3}{2(x+1)} $$
+Now we need to multiply the expression by $(x-1)$ to get the least common denominator. We can also take a look at the second rational expression and we see that only the factor 2 is missing, so let's rewrite them:
+
+$$ \frac{3}{2(x+1)} \cdot \frac{x-1}{x-1} + \frac{5}{(x-1)(x+1)} \cdot \frac{2}{2} = \frac{3(x-1)}{2(x+1)(x-1)} + \frac{10}{2(x+1)(x-1)} $$
+
+Notice that now we have the common denominator. Now we can add the numerators together and keep the denominator. So we have:
+
+$$ \frac{3(x-1)+10}{2(x+1)(x-1)} = \frac{3x-3+10}{2(x+1)(x-1)} = \frac{3x+7}{2(x+1)(x-1)} $$
+Now we can't simplify this any further because the numerator and denominator don't have any common factors.
