@@ -1,0 +1,90 @@
+\section{Factoring}
+In mathematics, factorization or factoring consists of writing a number or another mathematical object as a product of several factors, usually smaller or simpler objects of the same kind. \\
+
+\subsection{Factoring by pulling out HCF}
+
+The first method of factoring is by pulling out the highest common factor often referred as “HCF”. 
+
+\begin{align*}
+    &A. \quad 15 + 25x = 5(3 + 5x) \\
+    &B. \quad x^2y + y^2x^3 = x^2y(1 + xy) \\
+\end{align*}
+
+You can always check whether you have factored correctly by expanding the brackets.
+
+\subsection{Factoring by grouping}
+Second method of factoring is factoring by grouping, in this method we are looking for more terms, generally at least 4 terms. We are grouping the terms together in pairs of two terms so that each pair of terms has a common factor that we can factor out. 
+
+\begin{align*}
+    A. \quad x^3 + 3x^2 + 4x + 12 &= x^2(x + 3) + 4(x + 3) = (x^2 + 4)(x + 3) \\
+\end{align*}
+
+Notice that once we factored out the common factor, we were left with a common binomial factor. We can factor out the common binomial factor to get the final answer.
+
+\subsection{Factoring quadratics}
+A quadratic is an expression with a squared term, then just a term with a variable, then a constant. 
+\\ Like this: $ax^2 + bx + c$ 
+
+We are looking for two numbers that multiply you get $c$ and when you add them you get $b$.
+The reason why: 
+$$ (x + m)(x + n) = \\ x^2 + mx + nx + mn = x^2 + \underbrace{(m + n)}_b x + \underbrace{(mn)}_c $$
+
+$m$ and $n$ are the two numbers we are looking for. As you can see $m + n = b$ and $mn = c$. \\
+
+\textbf{Example}. Factor $x^2 - 6x + 8$ \\
+We are looking for two numbers that multiply you get $8$ and when you add them you get $-6$. \\
+The two numbers are $-2$ and $-4$ because $-2 \cdot -4 = 8$ and $-2 + -4 = -6$. \\
+Therefore, 
+\begin{align*}
+    x^2 - 6x + 8 &= (x - 2)(x - 4) \\
+\end{align*}
+
+\textbf{Example}. Factor $10x^2 + 11x - 6$ \\
+\begin{itemize}
+    \item Step 1. Multiply the leading coefficient (10) and the constant term (-6) to get -60. \\
+    \textbf{Why?} The main goal in factoring a quadratic equation is to express it as the product of two binomials(like (2x+4)(4x+5)). 
+    In the case of a quadratic with a leading coefficient (the coefficient of $x^2$) not equal to 1, like $10x^2$ in our example, we need to find two binomials of the form $(ax + b)(cx + d)$ e.g $(2x + 4)(5x+2)$ such that their product equals the given quadratic. 
+    So, in this context, we are essentially trying to break down the original quadratic ($10x^2 - 11x - 6$) into two binomials, and we start by looking for two numbers that will help us achieve this. These two numbers should meet two criteria:
+    \begin{itemize}
+        \item Their product should equal the product of the leading coefficient and the constant term (in this case, $10 \cdot -6 = -60$).
+        \item Their sum should equal the coefficient of the x-term (in this case, -11)
+    \end{itemize}
+    By finding such numbers, we can rewrite the middle term of the quadratic equation (the -11x term) as the sum or difference of two terms, each of which can be factored more easily. This allows us to perform factoring by grouping, making the overall factoring process more manageable.
+    \item Step 2.  Find two numbers that multiply to -60 and add up to the coefficient of the x-term (-11). In this case, those two numbers are -15 and 4 because $(-15) \cdot 4 = -60$ and $(-15) + 4 = -11$.
+    \item Step 3. Rewrite the middle term (-11x) using the two numbers found in step 2: 
+    $$ 10x^2 - 15x + 4x - 6 $$
+    \item Step 4. Group the terms: Group the first two terms $(10x^2 - 15x)$ and the last two terms $(4x - 6)$. This will gve us: 
+    $$ 5x(2x - 3) + 2(2x - 3) $$
+    \item Step 5. Factor out the HCF of each group: 
+    $$ 5x(2x - 3) + 2(2x - 3) = (5x + 2)(2x - 3) $$
+
+\end{itemize}
+And we are done factorising the quadratic equation.
+
+\subsection{Difference of squares}
+The difference of squares is a squared term minus another squared term.
+\\ Like this: $a^2 - b^2 = (a+b)(a-b) = a^2-ab+ab-b^2 $ 
+
+\textbf{Example.} Factor $x^2 - 9$ 
+$$ (x+3)(x-3) $$
+
+
+\textbf{Example.} Factor $9p^2 - 1$ 
+$$ (3p+1)(3p-1) $$
+
+\subsection{Difference or sum of cubes}
+The difference or sum of cubes is a cubed term plus or minus another cubed term.
+
+$$ a^3 - b^3 = (a-b)(a^2+ab+b^2) $$ Because, $$(a-b)(a^2+ab+b^2) = a^3 - ab^2 + a^2b - ab^2 + b^3 = a^3 - 2ab^2 + b^3 $$ 
+
+And, 
+$$ a^3 + b^3 = (a+b)(a^2-ab+b^2) $$ Because, $$(a+b)(a^2-ab+b^2) = a^3 + ab^2 - a^2b + ab^2 + b^3 = a^3 + 2ab^2 + b^3 $$ 
+\\
+\textbf{Example.} Factor $x^3 - 8$ \\
+We know that $x^3 - 8 = x^3 - 2^3$
+Therefore,
+$$ (x-2)(x^2+2x+4) $$
+
+if we expand out: 
+$$ (x-2)(x^2+2x+4) = x^3 + 2x^2 + 4x - 2x^2 - 4x - 8 = x^3 - 8 $$
+Therefore our answer is correct.
