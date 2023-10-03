@@ -1,0 +1,71 @@
+
+\section{Solving Quadratic Equations}
+\label{sec:quadratic-equations}
+A quadratic equation is an equation that's highest exponent/power is 2. It can be written in the form of $ax^2+bx+c=0$ where $a,b,c$ are constants representing real numbers and $a \neq 0$. In this section we will go over how to solve quadratic equations.
+
+\subsection{Solving quadratic equations by factoring}
+For example: 
+$$ 3x^2+7x-2=0$$ where $a=3$, $b=7$, and $c=-2$.
+This also a quadratic equation but not in standard form: 
+$$ 3x^2=-7x+2$$
+
+The key to solve quadratic equations is: 
+\begin{enumerate}
+    \item Write it in standard form.
+    \item Factor it or use the quadratic formula.
+\end{enumerate}
+
+\textbf{Example}. Find all real solutions for the equation $y^2=18-7y$
+First following the steps is to re-write the equation in standard form.
+$$y^2+7y-18=0$$
+Then as we previously discussed during factoring we need to look for two numbers that multiply to $-18$ and add to $7$. The numbers are $9$ and $-2$.
+
+Therefore, the equation can be factored as:
+$$(y+9)(y-2)=0$$
+Now for the equation to be true, one of the factors must be equal to zero. Therefore, $y+9=0$ or $y-2=0$. Solving for $y$ we get $y=-9$ or $y=2$. Therefore, the solutions for the equation are $y=-9$ or $y=2$.
+
+You can check whether they are correct by substituting the values of $y$ in the original equation. So:
+$$(-9)^2=18-7(-9)$$
+$$81=18+63$$ which is true. Therefore, $y=-9$ is a solution.
+To check for $y=2$:
+$$(2)^2=18-7(2)$$
+$$4=18-14$$ which is also true. Therefore, $y=2$ is also a solution.
+\newpage
+\textbf{Example}. Solve the equation $w^2=121$ \\
+First we need to re-write the equation in standard form:
+$$w^2-121=0$$ where $a=1$, $b=0$, and $c=-121$.
+Then we need to factor the equation. We can factor it as:
+$$(w+11)(w-11)=0$$ Because $w^2-121=(w+11)(w-11)$. \\
+
+Again, for the equation to be true, one of the factors must be equal to zero. Therefore, $w+11=0$ or $w-11=0$. Solving for $w$ we get $w=-11$ or $w=11$. Therefore, the solutions for the equation are $w=-11$ or $w=11$.
+
+Now we could have solved the equation by taking the square root of both sides. So:
+\begin{align*}
+    w^2&=121 \\
+    \sqrt{w^2}&=\pm \sqrt{121} \\
+    w&=\pm 11
+\end{align*}
+
+The reason why we have to take plus and minus is because when we take the square root of both sides we get $w=\pm 11$ because $11^2=121$ and $(-11)^2=121$ as well.
+
+\textbf{Example}. Solve the equation $x(x+2) = 7$
+\\
+First we need to re-write the equation in standard form by multiplying out and subtracting $7$ from both sides:
+$$x^2+2x-7=0$$ where $a=1$, $b=2$, and $c=-7$.
+Now again we are looking for two numbers that multiply to $-7$ and add to $2$. Unfortunately, there are no two whole numbers that multiply to $-7$ and add to $2$. Therefore, we can't factor the equation. So we have to use the quadratic formula to solve the equation.
+\subsection{Quadratic formula}
+The quadratic formula is a formula that gives the solutions for a quadratic equation. In our example $a = 1$, $b = 2$, and $c = -7$. So the quadratic formula is:
+$$x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
+So plugging in the values of $a$, $b$, and $c$ we get:
+$$x=\frac{-2 \pm \sqrt{2^2-4(1)(-7)}}{2(1)}$$
+
+Simplifying we get:
+$$x=\frac{-2 \pm \sqrt{32}}{2} = \frac{-2\pm\sqrt{16\cdot2}}{2} = \frac{-2\pm4\sqrt{2}}{2} $$
+Simplifying everything we get: 
+$$ -1\pm2\sqrt{2} $$
+So the solutions are: $x=-1+2\sqrt{2}$ or $x=-1-2\sqrt{2}$.
+
+\textbf{Example}. Solve the equation $\frac{1}{2}y^2 = \frac{1}{3}y-2$ \\
+
+First we need to re-write the equation in standard form by multiplying out and subtracting $\frac{1}{3}y-2$ from both sides:
+$$\frac{1}{2}y^2-\frac{1}{3}y+2=0$$ where $a=\frac{1}{2}$, $b=-\frac{1}{3}$, and $c=2$.
