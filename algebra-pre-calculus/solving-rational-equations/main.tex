@@ -1,1 +1,63 @@
 \section{Solving Rational Equations}
+A Rational equation is an equation that contains one or more rational expressions. A rational expression is a fraction whose numerator and denominator are polynomials. For example, $\frac{x^2+1}{x+1}$ is a rational expression as discussed in the previous section. In this section we will go over how to solve rational equations.
+
+\textbf{Example.} Solve: $\frac{x}{x+3} = 1+\frac{1}{x}$
+
+The steps to solve a rational equation are as follows:
+\begin{enumerate}
+    \item Find the least common denominator (LCD) of all the fractions in the equation. In our example we have two fractions, $\frac{x}{x+3}$ and $\frac{1}{x}$, we can think of 1 as $\frac{1}{1}$. \\
+    By multiplying them together, therefore the LCD is $(x+3)x$.
+    \item Next step is to "clean" the denaminator  by multiplying both sides of the equation by the LCD. So:
+    $$ (x+3)x \cdot \frac{x}{x+3} = (x+3)x \cdot \left(1+\frac{1}{x}\right)$$
+    The right side of the equation can be simplified as:
+    $$ (x+3)x \cdot \left(1+\frac{1}{x}\right) = (x+3)x + (x+3)$$
+    Therefore we can rewrite the equation as:
+    $$ \cancel{(x+3)}x \cdot \frac{x}{\cancel{x+3}} =  (x+3)x + (x+3)$$
+    $$ x^2 =  (x+3)x + (x+3)$$
+    \item Third step is to simplify and solve. 
+    $$ x^2 =  x^2+3x+x+3$$
+    $$ \cancel{x^2} =  \cancel{x^2}+3x+x+3$$
+    $$0 =  4x+3$$
+    $$4x =  -3$$
+    $$x =  -\frac{3}{4}$$
+    \item It is a good idea to check your answer by plugging it back into the original equation. In our example after plugging it in, we have:
+    $$ \frac{-\frac{3}{4}}{-\frac{3}{4}+3} = 1+\frac{1}{-\frac{3}{4}}$$
+    $$ \frac{-\frac{3}{4}}{\frac{9}{4}} = 1-\frac{4}{3}$$
+    $$ -\frac{3}{9} = -\frac{1}{3} $$
+    Therefore we can conclude that our answer is correct. Our final answer is $x = -\frac{3}{4}$.
+\end{enumerate}
+
+
+\textbf{Example.} Solve: 
+\begin{equation*}
+    \frac{4c}{c-5} - \frac{1}{c+1} = \frac{3c^2+3}{c^2-4c-5}
+\end{equation*}
+
+The steps are the same: 
+\begin{enumerate}
+    \item Find the LCD of all the fractions in the equation. In our example we have three fractions, $\displaystyle \frac{4c}{c-5}$, $\displaystyle  \frac{1}{c+1}$, and $\displaystyle \frac{3c^2+3}{c^2-4c-5}$. when simplifying the 3rd one to $(c-5)(c+1)$ by factoring, the LCD is $(c-5)(c+1)$.
+    \item Next step is to "clean" the denaminator  by multiplying both sides of the equation by the LCD. So:
+    $$ (c-5)(c+1) \cdot \frac{4c}{c-5} - (c-5)(c+1) \cdot \frac{1}{c+1} = (c-5)(c+1) \cdot \frac{(3c^2+3)}{(c-5)(c+1)}$$
+    Cancelling them we have:
+    $$ \cancel{(c-5)}(c+1) \cdot \frac{4c}{\cancel{c-5}} - (c-5)\cancel{(c+1)} \cdot \frac{1}{\cancel{c+1}} = \cancel{(c-5)}\cancel{(c+1)} \cdot \frac{(3c^2+3)}{\cancel{(c-5)}\cancel{(c+1)}}$$
+    \item Third step is to simplify and solve So: 
+    $$ 4c(c+1) - (c-5) = 3c^2+3$$
+    Let's expand the left side of the equation:
+    $$ 4c^2+4c - c + 5 = 3c^2+3$$
+    After subtracting $3c^2$ and simplifying we have:
+    $$ c^2+3c+5 = 3$$
+    $$ c^2+3c+2 = 0$$
+    Here we are with a quadratic equation, that we can solve by using what we have learned. 
+    So we are looking for two numbers that multiply to 2 and add to 3. The numbers are 1 and 2. So we can factor the equation as:
+    $$ (c+1)(c+2) = 0$$
+    Since either $c+1$ or $c+2$ is equal to 0, we have two solutions: $c = -1$ and $c = -2$.
+    \item When we are check our answer by plugging it back into the original equation, we notice that $c=-1$ is not a solution. Because it makes the denominator of the second fraction equal to 0. This is what we call an \textbf{extraneous solution}(In mathematics, an extraneous solution is a solution, such as that to an equation, that emerges from the process of solving the problem but is not a valid solution to the problem).
+    Therefore our final answer is $c = -2$.
+\end{enumerate}
+The steps to solve a rational equation are as follows:
+\begin{enumerate}
+    \item Find the least common denominator (LCD) of all the fractions in the equation. 
+    \item Then "clear" the equation of fractions by multiplying both sides of the equation by the LCD.
+    \item  Simplify and solve.
+    \item Check your answer by plugging it back into the original equation and eliminate any extraneous solutions(make the denaminator 0).
+\end{enumerate}
