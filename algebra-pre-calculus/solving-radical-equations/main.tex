@@ -1,0 +1,84 @@
+\section{Solving Radical Equations}
+A radical equation is an equation in which a variable is under a radical symbol. The most common radical equations are square root equations, However there can be cube root, 4th root up to nth root which can be any number.
+
+\subsection{Solving Square Root Equations} 
+\textbf{Example.} Solve: $x+\sqrt{x} = 12$ \\
+When we see an equation with a square root, we just want to get rid of it, the way we do it is we isolate the square root. In other words we want to get the term with the square root in it on one side of the equation and everything else by itself. \\
+
+Therefore, the steps can be
+\begin{enumerate}
+    \item Isolate the square root 
+    \begin{align*}
+        x+\sqrt{x} &= 12 \\
+        \sqrt{x} &= 12-x \quad \text{(get rid of the square root by squaring both sides)} \\
+    \end{align*}
+    \item Get rid of the square root. 
+    \begin{align*}
+        x &= (12-x)^2 \\
+        x &= 144 - 24x + x^2 \\
+        0 &= x^2 - 25x + 144 \quad \text{(get two numbers that multiply to 144 and app up to -25)} \\ 
+    \end{align*}
+   \item Solve the quadratic equation
+    \begin{align*}
+         0 &= x^2 - 25x + 144 \\
+         0 &= (x-9)(x-16) \\
+         x &= 9, 16
+    \end{align*}
+    \item Check the answer and eliminate extraneous solutions. 
+    \begin{align*}
+        x &= 9, 16 \\
+        x+\sqrt{x} &= 12 \\
+        9+\sqrt{9} &= 12 \\
+        9+3 &= 12 \\
+        12 &= 12 \quad \text{True} \\
+        16+\sqrt{16} &= 12 \\
+        16+4 &= 12 \\
+        20 &= 12 \quad \text{False} \\
+    \end{align*}
+    Therefore, the answer is $x=9$.
+\end{enumerate}
+
+\textbf{Example.} Solve: $2p^{\frac{4}{5}} = \frac{1}{8}$
+You'd might think that this is not a radical equation, however we know that radicals can be rewirtten as fractional exponents. 
+Following our steps: 
+\begin{enumerate}
+    \item Isolate the radical
+    \begin{align*}
+        2p^{\frac{4}{5}} &= \frac{1}{8} \quad \text{Divide by 2 so we can isolate the radical/fractional exponent} \\
+        p^{\frac{4}{5}} &= \frac{1}{16} 
+    \end{align*}
+    \item Get rid of the radical/fractional exponent.
+    Now here we can get raise both sides to the power of $5$. 
+    \begin{align*}
+        p^{\frac{4}{5}} &= \frac{1}{16} \\
+        (p^{\frac{4}{5}})^5 &= \left(\frac{1}{16}\right)^5 \\
+        p^4 &= \frac{1}{16^5} \quad \text{Multiply by $\frac{1}{4}$ OR $\sqrt[4]{x^1}$} \\
+    \end{align*}
+    \item Solve the equation
+    \begin{align*}
+        (p^4)^{\frac{1}{4}} &= \pm \left(\left(\frac{1}{6}\right)^5\right)^{\frac{1}{4}} \quad \text{Be careful because our answer can be + or - as well} \\ 
+        p &= \pm \left(\frac{1}{16}\right)^{\frac{5}{4}} \quad \text{Rewrite this using our fractional exponent rule} \\
+        p &= \pm  \left(\sqrt[4]{\frac{1}{16}}\right)^5 \\
+        p &= \pm \left(\frac{\sqrt[4]{1}}{\sqrt[4]{16}}\right)^5 \\
+        p &= \pm \left(\frac{1}{2}\right)^5 \\
+        p &= \pm \frac{1}{32} 
+    \end{align*}
+    Therefore our answer is $p=\pm \frac{1}{32}$
+    \item Check the answer and eliminate extraneous solutions. Let's plug in our answer into the original equation.
+    \begin{align*}
+        2p^{\frac{4}{5}} &= \frac{1}{8} \\
+        2\left(\frac{1}{32}\right)^{\frac{4}{5}} &= \frac{1}{8} \\
+        2\left(\frac{1^{\frac{4}{5}}}{32^{\frac{4}{5}}}\right) &= \frac{1}{8} \\
+        2\left(\frac{1}{(\sqrt[5]{32})^4}\right) &= \frac{1}{8} \\
+        2\left(\frac{1}{16}\right) &= \frac{1}{8} \\
+        \frac{1}{8} &= \frac{1}{8} \quad \text{True} \\
+    \end{align*}
+    We also could have gotten rid of the fractional exponent, by raising both sides to the power of $\frac{5}{4}$.
+    So: 
+    \begin{align*}
+        p^4 &= \frac{1}{16^5} \\
+        (p^{\frac{4}{5}})^{\frac{5}{4}} &= \left(\frac{1}{16^5}\right)^{\frac{5}{4}} \\
+        p &= (\frac{1}{16})^{\frac{5}{4}} 
+    \end{align*}
+    And then so on as we did before.
+\end{enumerate}
