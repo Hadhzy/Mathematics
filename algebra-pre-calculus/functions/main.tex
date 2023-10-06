@@ -10,6 +10,20 @@ Functions can be described with an equation.
 What is $f(2)$ ? $ f(5) ?$ \\
 \vspace{4pt}
 
+In mathematics, the notation "f(x)" is commonly used to represent a function. In this notation, "f" is the name of the function, and "x" is the input or independent variable. When you write "f(x)," you are essentially saying "the value of the function f when the input is x."
+
+The function itself is a rule or relationship that assigns a unique output (often denoted as "y") for each input value "x." So, when you evaluate "f(x)," you are finding the corresponding output value for the given input.
+
+Here's a simple example to illustrate this:
+
+Let's say you have a function defined as:
+f(x) = 2x + 3
+
+If you want to find the value of the function when x is 4, you would write it as:
+$f(4) = 2 \cdot 4 + 3 = 8 + 3 = 11$
+
+So, in this case, f(4) refers to the y-value or the output of the function when x is 4, and it equals 11. The notation "f(x)" is just a way to represent this relationship between inputs (x-values) and outputs (y-values) in a concise and standardized manner.
+
 When we write $f(2)$, we are asking what is the value of the function when $x = 2$. \\
 So we take $2$ and plug it in for $x$ in the equation. \\
 
@@ -244,3 +258,31 @@ B. Symmetric with respect to the y-axis, x-axis, and origin. \\
 C. Symmetric with respect to the y-axis. \\
 D. Symmetric with respect to the x-axis. \\
 
+
+\subsection{Even and Odd Functions}
+
+\textbf{Definition.} A function $f(x)$ is even if its graph is symmetric with respect to the y-axis. Meaning that whenever $(x,y)$ is on the graph, then $(-x,y)$(its mirror image) is also on the graph. \\
+That is the y-values corresponding to the $x$ and $-x$ are the same. \\
+Since $y = f(x)$ we can say that the points are $(x,f(x))$ and $(-x,f(-x))$. \\
+In conclusion  we can say that $f(x) = f(-x)$ for all x-values in its domain. Since they are representing the y-values which are the same. 
+see here: 
+\begin{align*}
+	\includegraphics{algebra-pre-calculus/functions/even_odd_example2.png} \\
+\end{align*}
+
+\textbf{Example.} $f(x) = x^2+3$ is an even function because... \\
+\textbf{Solution.} $f(-x) = (-x)^2+3 = x^2+3 = f(x)$ \\
+
+\textbf{Definition.} A function $f(x)$ is odd if its graph is symmetric with respect to the origin. Meaning that whenever $(x,y)$ is on the graph, then $(-x,-y)$(its mirror image) is also on the graph. \\
+The graphs y-value at x and the graphs y-value at -x are the opposites of each other. \\
+Since $y = f(x)$ we can say that the points are $(x,f(x))$ and $(-x,-f(-x))$. \\
+In conclusion  we can say that $f(-x) = -f(x)$ for all x-values in its domain. This means that the y-values are the opposites of each other. \\
+see here:
+\begin{align*}
+	\includegraphics{algebra-pre-calculus/functions/even_odd_example3.png} \\
+\end{align*}
+\textbf{Example.} $f(x) = 5x-\frac{1}{x}$ is an odd function because... \\
+\textbf{Solution.} $f(-x) = 5(-x)-\frac{1}{-x} = -5x+\frac{1}{x} = -(5x-\frac{1}{x}) = -f(x)$ \\
+
+In conclusion we covered that functions that are symmetric with respect to the y-axis are even functions and functions that are symmetric with respect to the origin are odd functions. \\
+The reason why we haven't covered functions that are symmetric with respect to the x-axis is because they are neither even nor odd and more importantly they are NOT functions which we will touch on later. \\
