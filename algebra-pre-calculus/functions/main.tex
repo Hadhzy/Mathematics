@@ -110,4 +110,99 @@ So we have to consider the same restrictions as before. \\
 We've already solved the first condition which was $x\neq3$ and $x\neq1$. \\
 The second condition is $x\le\frac{3}{2}$. \\
 
-Therefore our domain is $(-\infty, 1) \cup (1, \frac{3}{2}]$. \\
+Therefore our domain is $(-\infty, 1) \cup (1, \frac{3}{2}]$.
+
+\subsection{Increasing and Decreasing Functions}
+
+\textbf{Example.} Which function is Increasing and which is Decreasing?
+
+\begin{align*}
+	\includegraphics{algebra-pre-calculus/functions/graph3.png}
+\end{align*}
+
+As seen the first function is increasing and the second function is decreasing. 
+
+This can be written more formaly as: \\
+$ x_1 < x_2 \Rightarrow f(x_1) < f(x_2) $ \\
+$x_1$ and $x_2$ are two arbitrary x-values. \\
+This means that the y-values are increasing as the x-values are increasing. \\
+
+In the decreasing function, the y-values are decreasing as the x-values are increasing. 
+$ x_1 < x_2 \Rightarrow f(x_1) > f(x_2) $ \\
+
+\textbf{Example.} On what intervals is the function graphed below increasing? Decreasing? 
+\begin{align*}
+	\includegraphics{algebra-pre-calculus/functions/graph4.png}
+\end{align*}
+
+We are going to solve this in terms of the x-values. Simply because the y-values can be same for different parts of the graph but the x-values are unique.
+\textbf{Decreasing}: $-4\le x<-2, \quad 4<x\le7 $ \\
+\textbf{Increasing}: $-2< x<1$ \\
+As intervals: $[-4, -2) \cup (4,7), (-2, 1)$ \\
+
+\subsection{Maximums and Minimums on Graphs}
+\textbf{Definition.} An absolute maximum of a function, also known as a global maximum, is the highest value that the function can attain over its entire domain. In other words, it is the largest output (or y-value) that the function can produce for any input (or x-value) within its defined domain. \\
+In other words a function f(x) has an absolute maximum at $x = c$ if $f(c) \ge f(x)$ for all $x$ in the domain of $f$. \\
+The y-value f(c) is called the absolute maximum value of $f$. \\
+and the point $(c, f(c))$ is called the absolute maximum point of $f$. \\
+
+\begin{align*}\includegraphics{algebra-pre-calculus/functions/graph5.png}\end{align*}
+Here we can see that essentially the absolute maximum is the highest point on the graph. \\
+And the absolute value point would be the point where it achieves the absolute maximum. \\
+A function can have multiple absolute maximum points(multiple points referencing to the absolute maximum of the function), however it can only have one absolute maximum value. \\
+
+\textbf{Definition}. The absolute minimum of a function, also known as a global minimum, is the lowest value that the function can attain over its entire domain. In other words, it is the smallest output (or y-value) that the function can produce for any input (or x-value) within its defined domain. \\
+The absolute minimum of a function $f(x)$ is the smallest value of $f(x)$ over its entire domain. \\
+In other words a function f(x) has an absolute minimum at $x = c$ if $f(c) \le f(x)$ for all $x$ in the domain of $f$. \\
+The y-value f(c) is called the absolute minimum value of $f$. \\
+and the point $(c, f(c))$ is called the absolute minimum point of $f$. \\
+
+\begin{align*}\includegraphics{algebra-pre-calculus/functions/graph6.png}\end{align*}
+Here we can see that essentially the absolute minimum is the lowest point on the graph. \\
+And the absolute value point would be the point where it achieves the absolute minimum. \\
+A function can have multiple absolute minimum points(multiple points referencing to the absolute minimum of the function), however it can only have one absolute minimum value. \\
+\newpage
+\subsection{Local Maximums and Minimums}
+\textbf{Definition.} A local maximum of a function is a point on the graph where the y-value is greater than or equal to all the y-values of points in the nearby region. \\
+A function f(x) has a local maximum at $x = c$ if $f(c) \ge f(x)$ for all $x$ in some open interval around $c$. \\
+
+In other words, the way we identify local maximums is by looking at the graph and seeing if there is a point where an interval around that point exists such that all function values within that interval are less than or equal to the function value at that specific point. If this condition is met, we can conclude that the function has a local maximum at that point.
+
+A local minimum of a function is a point on the graph where the y-value is less than or equal to all the y-values of points in the nearby region. \\
+A function f(x) has a local minimum at $x = c$ if $f(c) \le f(x)$ for all $x$ in some open interval around $c$. \\
+In other words, the way we identify local minimums is by looking at the graph and seeing if there is a point where an interval around that point exists such that all function values within that interval are greater than or equal to the function value at that specific point. If this condition is met, we can conclude that the function has a local minimum at that point. \\
+
+\textbf{Definition}. Local maximum and minimum points are also called relative maximum and minimum points. \\
+\textbf{Definition}. A point where a function changes from increasing to decreasing or decreasing to increasing is called a turning point. \\
+
+\newpage
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{algebra-pre-calculus/functions/graph7.png}
+	\caption{Absolute Maximum and Minimum with Local Maximum and Minimum}
+\end{figure}
+
+\subsection{Example}
+
+
+\begin{align*}
+	\includegraphics{algebra-pre-calculus/functions/example_graph.png}
+\end{align*}
+
+\textbf{Example.} 
+\begin{enumerate}
+	\item Mark all local maximum and minimum points on the graph. 
+	\item Mark all absolute maximum and minimum points on the graph.
+	\item What are the local maximum and minimum values?
+	\item What are the absolute maximum and minimum values?
+\end{enumerate}
+
+\textbf{Solution.} \\
+The function has a local maximum point here: $(2.7,-3.3)$ \\
+There is a local minimum point here: $(2, 2)$ \\
+The point with the drilled out circle means that it is not part of the graph. If it would be then that point would be a local minimum point and an absolute minimum point. \\ 
+The point $(0,4)$ by some sources considered to be a local maximum point, However by other sources it doesn't. 
+Therefore, we do not have any absolute maximum points, as the arrow indicates that the function goes to infinity. \\
+We don't have any absolute minimum points either. \\
+Now for talking about the values, we can see that the local maximum value is $-3.3$ and the local minimum value is $2$ which are just the y-values of the points. \\
+We do not have any absolute maximum or minimum values.
