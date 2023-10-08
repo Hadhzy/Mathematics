@@ -1,0 +1,110 @@
+\section{Solving Absolute Value Equations}
+
+The absolute value for a positive number is the number itself. For example, $|3|=3$. The absolute value for a negative number is the number itself with the negative sign removed. For example, $|-3|=3$. The absolute value of a number is always positive or zero. For example, $|0|=0$.
+You can think of the absolute value as the distance of a number from zero on the number line. For example, $|3|$ is 3 units away from zero on the number line. $|-3|$ is also 3 units away from zero on the number line. The absolute value of a number is always positive or zero. For example, $|0|$ is 0 units away from zero on the number line.
+\\\\
+\textbf{Example.} Solve the equation $3|x|+2=4$
+
+\begin{enumerate}
+	\item Isolate absolute value part of the equation.
+	      \begin{align*}
+		      3|x|+2 & =4 \quad \text{Subtract 2 from both sides} \\
+		      3|x|   & =2 \quad \text{Divide both sides by 3}     \\
+		      |x|    & =\frac{2}{3}
+	      \end{align*}
+	\item Think in terms of distance. \\
+	      \begin{tikzpicture}
+		      % Draw the number line
+		      \draw[<->] (-3,0) -- (3,0);
+
+		      % Mark 2/3
+		      \draw[fill=black] (2/3,0) circle (2pt) node[above] {$\frac{2}{3}$};
+
+		      % Mark 0
+		      \draw[fill=black] (0,0) circle (2pt) node[below] {$0$};
+
+		      % Mark -2/3
+		      \draw[fill=black] (-2/3,0) circle (2pt) node[below] {$-\frac{2}{3}$};
+	      \end{tikzpicture}
+	      As we can see from the number line, the distance of $x$ from zero is $\frac{2}{3}$ but since $x$ can be either positive or negative, we have two solutions: $x=\frac{2}{3}$ and $x=-\frac{2}{3}$. Because both solutions are $\frac{2}{3}$ away from zero and their absolute value is the same, we can write the solution as $x=\pm\frac{2}{3}$.
+	\item  Check the solution. \\
+	      \begin{align*}
+		      3|x|+2                      & =4 \quad \text{Substitute $x=\frac{2}{3}$} \\
+		      3\left|\frac{2}{3}\right|+2 & =4 \quad \text{Simplify}                   \\
+		      3\left(\frac{2}{3}\right)+2 & =4 \quad \text{Simplify}                   \\
+		      2+2                         & =4 \quad \text{Simplify}                   \\
+		      4                           & =4 \quad \text{True}
+	      \end{align*}
+	      Let's plug in $x=-\frac{2}{3}$.
+	      \begin{align*}
+		      3|x|+2                       & =4 \quad \text{Substitute $x=-\frac{2}{3}$} \\
+		      3\left|-\frac{2}{3}\right|+2 & =4 \quad \text{Simplify}                    \\
+		      3\left(\frac{2}{3}\right)+2  & =4 \quad \text{Simplify}                    \\
+		      2+2                          & =4 \quad \text{Simplify}                    \\
+		      4                            & =4 \quad \text{True}
+	      \end{align*}
+	      In conlusion, regardless of the sign of a number that absolute value will always be positive or zero. When solving absolute value equations, you will always get two solutions or no solutions.
+\end{enumerate}
+
+\textbf{Example.} Solve the equation $|3x+2|=4$
+Let's go through this following the same steps as the previous example.
+\begin{enumerate}
+	\item Isolate absolute value part of the equation.
+	      The absolute value part of the equation is already isolated.
+	\item Think in terms of distance.
+	      Since we know that $|3x+2|$ supposed to be at a distance of 4 from zero. Therefore, since it is absolute value it can be either 4 units to the right or 4 units to the left of zero.
+	      \\
+	      \begin{tikzpicture}
+		      % Draw the number line
+		      \draw[<->] (-6,0) -- (6,0);
+
+		      % Mark -4
+		      \draw[fill=black] (-4,0) circle (2pt) node[below] {$-4$};
+		      \node[below] at (-4,-0.5) {$|3x + 2|$};
+
+		      \draw[fill=black] (0,0) circle (2pt) node[below] {$0$};
+
+		      % Mark 4
+		      \draw[fill=black] (4,0) circle (2pt) node[below] {$4$};
+		      \node[below] at (4,-0.5) {$|3x + 2|$};
+	      \end{tikzpicture}
+	      \\
+	      Therefore, we can write them as two equations:
+	      \begin{align*}
+		      3x+2 & =4 \quad \text{Solve for $x$}  \\
+		      3x   & =2                             \\
+		      x    & =\frac{2}{3}                   \\
+		      3x+2 & =-4 \quad \text{Solve for $x$} \\
+		      3x   & =-6                            \\
+		      x    & =-2
+	      \end{align*}
+	\item Check the solution.
+	      \begin{align*}
+		      |3x+2|                        & =4 \quad \text{Substitute $x=\frac{2}{3}$} \\
+		      |3\left(\frac{2}{3}\right)+2| & =4 \quad \text{Simplify}                   \\
+		      |2+2|                         & =4 \quad \text{Simplify}                   \\
+		      |4|                           & =4 \quad \text{Simplify}                   \\
+		      4                             & =4 \quad \text{True}
+	      \end{align*}
+	      Let's plug in $x=-2$.
+	      \begin{align*}
+		      |3x+2|    & =4 \quad \text{Substitute $x=-2$} \\
+		      |3(-2)+2| & =4 \quad \text{Simplify}          \\
+		      |-6+2|    & =4 \quad \text{Simplify}          \\
+		      |-4|      & =4 \quad \text{Simplify}          \\
+		      4         & =4 \quad \text{True}
+	      \end{align*}
+\end{enumerate}
+
+\textbf{Example.} Solve the equation $5|4p-3|+16=1$
+Let's go through this following the same steps as the previous example.
+\begin{enumerate}
+	\item Isolate the absolute value part of the equation.
+	      \begin{align*}
+		      5|4p-3|+16 & =1 \quad \text{Subtract 16 from both sides} \\
+		      5|4p-3|    & =-15 \quad \text{Divide both sides by 5}    \\
+		      |4p-3|     & =-3
+	      \end{align*}
+	\item Think in terms of distance.
+	      The problem here is that we can't have a negative distance. An absolute value of a number is always positive or zero. Therefore, there is no solution to this equation.
+\end{enumerate}
