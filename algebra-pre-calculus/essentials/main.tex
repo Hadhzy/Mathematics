@@ -11,11 +11,111 @@ This section will cover the essentials in order to get started.
 
 
 \subsection{The properties of Real numbers}
-\includegraphics{algebra-pre-calculus/essentials/sets2.jpg}
-\begin{itemize}
-    \item The associative property of addition states that you can group the addends in different ways without changing the outcome. The commutative property of addition states that you can reorder the addends without changing the outcome.
-    \item The commutative property of multiplication shows that it is acceptable to rearrange terms when multiplying. In contrast, the associative property of multiplication moves parentheses to order the multiplication.
-    \item According to the distributive property, multiplying the sum of two or more addends by a number will give the same result as multiplying each addend individually by the number and then adding the products together.
-    \item The multiplicative inverse property states that if we multiply a number with its reciprocal, the product is always equal to 1.
-    \item The inverse property of addition states that adding a number and it's opposite, called the additive inverse, will produce a sum of zero.
-\end{itemize}
+\includegraphics[width=1.1\textwidth]{algebra-pre-calculus/essentials/properties.png}
+
+\subsection{Addition and Subtraction}
+The number 0 is special for addition; it is called the additive identity because $a+0=a$ for any real number $a$. Every real number $a$ has a negative, $-a$, that satisfies $a+(-a)=0$. Subtraction is the operation that undoes addition; to subtract a number from another, we simply add the negative of that number. By definition
+$$
+a-b=a+(-b)
+$$
+To combine real numbers involving negatives, we use the following properties.
+\includegraphics[width=1.1\textwidth]{algebra-pre-calculus/essentials/properties_addition_subtraction.png}
+
+Property 6 states the intuitive fact that $a-b$ and $b-a$ are negatives of each other. \\
+Property 5 is often used with more than two terms:
+$$
+    -(a+b+c)=-a-b-c
+$$
+
+\subsection{Multiplication and Division}
+The number 1 is special for multiplication; it is called the \textbf{multiplicative identity} because $a \cdot 1=a$ for any real number $a$. Every nonzero real number $a$ has an inverse, $1 / a$, that satisfies $a \cdot(1 / a)=1$. Division is the operation that undoes multiplication; to divide by a number, we multiply by the inverse of that number. If $b \neq 0$, then, by definition,
+$$
+a \div b=a \cdot \frac{1}{b}
+$$
+We write $a \cdot(1 / b)$ as simply $a / b$. We refer to $a / b$ as the quotient of $a$ and $b$ or as the fraction $a$ over $b$; $a$ is the numerator and $b$ is the denominator (or divisor). To combine real numbers using the operation of division, we use the following properties. \\
+\includegraphics[width=1.1\textwidth]{algebra-pre-calculus/essentials/properties_multiplication_division.png}
+
+When adding fractions with different denominators, we don’t usually use Property 4.
+Instead we rewrite the fractions so that they have the smallest possible common denominator (often smaller than the product of the denominators), and then we use Property 3. This
+denominator is the Least Common Denominator (LCD) described in the next example.
+
+\subsection{Using the LCD to Add Fractions}
+
+Evaluate: $\frac{5}{36}+\frac{7}{120}$
+\textbf{Solution.} Factoring each denominator into prime factors gives
+$$
+36=2^2 \cdot 3^2 \quad \text { and } \quad 120=2^3 \cdot 3 \cdot 5
+$$
+We find the least common denominator (LCD) by forming the product of all the prime factors that occur in these factorizations, using the highest power of each prime factor. Thus the LCD is $2^3 \cdot 3^2 \cdot 5=360$. So
+$$
+\begin{aligned}
+\frac{5}{36}+\frac{7}{120} & =\frac{5 \cdot 10}{36 \cdot 10}+\frac{7 \cdot 3}{120 \cdot 3} & \text { Use common denominator } \\
+& =\frac{50}{360}+\frac{21}{360}=\frac{71}{360} & \begin{array}{l}
+\text { Property } 3: \text { Adding fractions with the } \\
+\text { same denominator }
+\end{array}
+\end{aligned}
+$$
+
+\subsection{Real line}
+
+The real numbers can be represented by points on a line, as shown below. The
+positive direction (toward the right) is indicated by an arrow. We choose an arbitrary
+reference point O, called the origin, which corresponds to the real number 0. Given any
+convenient unit of measurement, each positive number x is represented by the point on
+the line a distance of x units to the right of the origin, and each negative number -x is
+represented by the point x units to the left of the origin. The number associated with the
+point P is called the coordinate of P, and the line is then called a coordinate line, or a
+real number line, or simply a real line. Often we identify the point with its coordinate
+and think of a number as being a point on the real line.
+
+\begin{align*}
+    \includegraphics[width=1.1\textwidth]{algebra-pre-calculus/essentials/real-line.png}
+\end{align*}
+
+\section{Absolute Value and Distance}
+The absolute value of a number $a$, denoted by $|a|$ , is the distance from $a$ to 0 on
+the number line. Distance is always positive or zero, so we have
+$|a|\geq0$ for every number $a$. Remembering that $-a$ is positive when $a$ is negative, we have the following definition.
+
+\begin{equation*}
+    |a| = \begin{cases}
+        \;a  & \textnormal{if} \ a \geq 0 \\
+        \;-a & \textnormal{if} \ a < 0
+    \end{cases}
+\end{equation*}
+
+(a) $|3|=3$ \\
+(b) $|-3|=-(-3)=3$ \\
+(c) $|0|=0$ \\
+(d) $|3-\pi|=-(3-\pi)=\pi-3 \quad($ since $3<\pi \quad \Rightarrow \quad 3-\pi<0)$
+
+\subsection{Properties of Absolute Value}
+\begin{enumerate}
+    \item $|a| \geq 0$
+    \item $|a|=|-a|$
+    \item $|a b|=|a||b|$
+    \item $\displaystyle \left|\frac{a}{b}\right|=\frac{|a|}{|b|}$
+    \item $|a+b| \leq|a|+|b|$
+\end{enumerate}
+
+\subsection{Distance Between Points on the Real line}
+
+What is the distance on the real line between the numbers -2 and 11? From
+Figure 11 we see that the distance is 13. We arrive at this by finding either
+$ |11-(-2)|=13$ or $|(-2)-11=13|$. From this observation we make the following definition. \\
+
+If $a$ and $b$ are real numbers, then the \textbf{distance} between the points $a$ and $b$ on the real line is: \\
+$$ d(a,b)=|a-b| $$
+
+From the Property 6 of negatives it follows that
+$$ |b-a| = |a-b|$$
+$$ |3-7| = |7-3| = 4 $$
+
+This confirms that, as we would expect, the distance from a to b is the same as the
+distance from b to a.
+
+\textbf{Example.} The distance between then numbers -8 and 2 is $d(-8,2)=|-8-2|=|-10|=10$.
+
+\subsubsection*{Exercises}
+For Exercises please download the book from here(\url{https://faculty.ksu.edu.sa/sites/default/files/precalculus-mathematics_for_calculus-j._stewart_l._redlin_and_s._watson-cengage_learning_7th_edition_2015.pdf}) and you can go to the 37th page for exercises. 
