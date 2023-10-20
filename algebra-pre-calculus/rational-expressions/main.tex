@@ -1,60 +1,77 @@
 \section{Rational Expressions}
-Rational expressions are expressions that are in the form of a fraction usually a variable in it. Like
-$$ \frac{x+2}{x^2+3}$$
-In this section we will go over adding, subtracting, dividing, and multiplying rational expressions. We will also go over simplifying rational expressions to lowest terms.
+A quotient of two algebraic expressions is called a \textbf{fractional expression}. Here are
+some examples:
+$$ \frac{2x}{x-1} \quad \frac{y-2}{y^2+4} \quad \frac{x^3-x}{x^2+5x+6} \quad \frac{x}{\sqrt{x^2+1}}$$
 
-\subsection{Reduce to lowest terms}
-\textbf{Example.} Simplifying $\displaystyle \frac{21}{45}$  by reducing to lowest terms. \\
-We can reduce this to lowest terms by factoring the numerator and denominator and then canceling out the common factors. So we have: 
-$$ \frac{21}{45} = \frac{\cancel{3} \cdot 7}{\cancel{3} \cdot 3 \cdot 5} = \frac{7}{3 \cdot 5} = \frac{7}{15}$$
+A \textbf{rational expression} is a fractional expression in which both the numerator and the
+denominator are polynomials. For example, the first three expressions in the above
+list are rational expressions, but the fourth is not, since its denominator contains a
+radical. In this section we learn how to perform algebraic operations on rational expressions.
 
-\textbf{Example.} Simplify $\displaystyle \frac{3x+6}{x^2+4x+4}$ by reducing to lowest terms. \\
-Here we can factor the numerator and denominator and then cancel out the common factors. So we have:
+\subsection{The Domain fo an Algebraic Expression}
+In general, an algebraic expression may not be defined for all values of the variable.
+The \textbf{domain} of an algebraic expression is the set of real numbers that the variable is
+permitted to have. The table in the margin gives some basic expressions and their
+domains
 
-$$ \frac{3x+6}{x^2+4x+4} = \frac{3\cancel{(x+2)}}{\cancel{(x+2)}(x+2)} = \frac{3}{x+2}$$
+\begin{align*}
+    \includegraphics{algebra-pre-calculus/rational-expressions/expressions_domain.png}
+\end{align*}
+
+\subsection{Finding the Domain of an Expression}
+Find the domains of the following expressions:
+\textbf{(a)} $2x^2+3x-1$
+This polynomial is defined for every x. Thus the domain is the set $\mathbb{R}$ of real
+numbers. \\
+\textbf{(b)} $\displaystyle \frac{x}{x^2-5x+6}$ \quad $\rightarrow$ We first factor the denominator. 
+$$ x^2-5x+6 = (x-2)(x-3)$$ Since the denominator is zero when $x=2$ or $x=3$, the domain is the set of all real numbers except 2 and 3. So: $$ \text{Domain} = \{ x \in \mathbb{R} \mid x \neq 2, 3 \}$$
+\\ \break 
+\textbf{(c)} $\displaystyle \frac{\sqrt{x}}{x-5}$ \quad $\rightarrow$ For the numerator to b e defined, we must have $x\geq0$. Also we cannot we divide by zero, so $x\neq5$
+Thus the domain is the set of all real numbers greater than or equal to zero, except 5. So: $$ \text{Domain} = \{ x \in \mathbb{R} \mid x \geq 0, x \neq 5 \}$$
+
+\subsection{Simplifying Rational Expressions}
+To \textbf{simplify rational expressions}, we factor both the numerator and the denominator and then \textbf{cancel} common factors from the numerator and denominator.
+Like: $$ \frac{x^2-1}{x^2+x-2} = \frac{\cancel{(x-1)}(x+1)}{\cancel{(x-1)}(x-2)}=\frac{x+1}{x-2}$$
 
 
-Essentially when reducing to lowest terms we are trying to factor them first and then cancel out the common factors.
+\subsection{Multiplying and Dividing Rational Expressions}
+To \textbf{multiply rational expressions}, we are multiplying the numerators and denominators together. Like: $$ \frac{2x}{x^2-1} \cdot \frac{x^2-1}{x^2+1} = \frac{2x(x^2-1)}{(x^2-1)(x^2+1)} = \frac{2x}{x^2+1}$$ 
 
-\subsection{Multiplying and Dividing rational expressions}
-\textbf{Example.} Compute 
+When it comes to \textbf{divide rational expressions}, we are multiplying the numerator by the reciprocal of the denominator. Like: $$ \frac{2x}{x^2-1} \div \frac{x^2-1}{x^2+1} = \frac{2x}{x^2-1} \cdot \frac{x^2+1}{x^2-1} = \frac{2x(x^2+1)}{(x^2-1)(x^2+1)} = \frac{2x}{x^2-1}$$
 
-\begin{enumerate}
-    \item $\displaystyle \frac{4}{3} \cdot \frac{2}{5}$
-    
-    Here we can just simply multiply the numerators and denominators together. So we have:
-    $$ \frac{4}{3} \cdot \frac{2}{5} = \frac{4 \cdot 2}{3 \cdot 5} = \frac{8}{15}$$
-    \item $\dfrac{\frac{4}{5}}{\frac{2}{3}}$
-    Here we can just simply multiply the numerator by the reciprocal of the denominator. So we have:
-    $$ \frac{\frac{4}{5}}{\frac{2}{3}} = \frac{4}{5} \cdot \frac{3}{2} = \frac{4 \cdot 3}{5 \cdot 2} = \frac{12}{10} = \frac{6}{5}$$
-    \item $ \displaystyle \dfrac{ \displaystyle \frac{x^2+x}{x+4}}{ \displaystyle \frac{x+1}{x^2-16}}$
-    Here we are trying to devide two rational expressions. We can do this by multiplying the numerator by the reciprocal of the denominator, then apply our factoring knowledge. So we have:
-    $$ \frac{\frac{x^2+x}{x+4}}{ \frac{x+1}{x^2-16}} = \frac{x^2+x}{x+4} \cdot \frac{x^2-16}{x+1} = \frac{(x^2+x)(x^2-16)}{(x+4)(x+1)} = \frac{x\cancel{(x+1)}\cancel{(x+4)}(x-4)}{\cancel{(x+4)}\cancel{(x+1)}} = x(x-4)$$
-\end{enumerate}
+\subsection{Adding and Subtracting Rational Expressions}
+To \textbf{add or subtract rational expressions}, we need to find a common denominator. We can do this by finding the least common multiple of the denominators. Like: $$ \frac{2}{x-1} + \frac{3}{x+1} = \frac{2(x+1)}{(x-1)(x+1)} + \frac{3(x-1)}{(x-1)(x+1)} = \frac{2x+2}{(x-1)(x+1)} + \frac{3x-3}{(x-1)(x+1)} = \frac{5x-1}{(x-1)(x+1)}$$
 
-\subsection{Adding and Subtracting rational expressions}
+\subsection{Rationalizing the denominator or the Numerator}
+If a fraction has a denominator of the form $A+B\sqrt{C}$, we can rationalize the denominator by multiplying numerator and denominator by the conjugate radical(its opposite) $A-B\sqrt{C}$.
+This works because, by Special Product Formula 1, the product of the
+denominator and its conjugate radical does not contain a radical:
 
-\textbf{Example.} Subtract $\displaystyle \frac{7}{6} - \frac{4}{15}$ \\
-Here we can't just subtract the numerators and denominators because they are not the same. So we need to find a common denominator. We can do this by finding the least common multiple of the denominators. So we have:
-$$ \frac{7}{6} - \frac{4}{15} = \frac{7 \cdot 5}{6 \cdot 5} - \frac{4 \cdot 2}{15 \cdot 2} = \frac{35}{30} - \frac{8}{30} = \frac{27}{30} = \frac{9}{10}$$
+$$ (A+B\sqrt{C})(A-B\sqrt{C})=A^2-B^2C$$
 
-\textbf{Example.} Add $\displaystyle \frac{3}{2x+2} + \frac{5}{x^2-1}$ \\
-In order to find the least common denominator we need to factor the denominators. So we have:
-\begin{align}
-    2x+2 &= 2(x+1) \\
-    x^2-1 &= (x+1)(x-1)
-\end{align}
+\subsection{Rationalizing the Denominator}
+Rationalise the denominator: $\displaystyle \frac{1}{1+\sqrt{2}}$ \\ \break
+We can multiply the numerator and denominator by the conjugate radical $1-\sqrt{2}$:
+$$ \frac{1}{1+\sqrt{2}} \cdot \frac{1-\sqrt{2}}{1-\sqrt{2}} = \frac{1-\sqrt{2}}{1^2-(\sqrt{2})^2} = \frac{1-\sqrt{2}}{1-2} = \frac{1-\sqrt{2}}{-1} = \sqrt{2}-1$$
+Here what we did is that we multiplied the numerator and denominator by the conjugate radical $1-\sqrt{2}$, then we simplified the denominator by using the Special Product Formula 1, and then we simplified the fraction.
 
-The least common denominator is the expression that contains all the factors of the denominators. which is $2(x+1)(x-1)$. We don't need to rewrite the $(x+1)$ because it is already in the least common denominator. 
-Now we have to rewrite each of the two rational expressions by multiplying whatever is missing from the denominator in terms of the least common denominator. \\
 
-Let's first factorise the first rational expression's denaminator. 
-$$ \frac{3}{2(x+1)} $$
-Now we need to multiply the expression by $(x-1)$ to get the least common denominator. We can also take a look at the second rational expression and we see that only the factor 2 is missing, so let's rewrite them:
+\subsection{Rationalizing the Numerator}
 
-$$ \frac{3}{2(x+1)} \cdot \frac{x-1}{x-1} + \frac{5}{(x-1)(x+1)} \cdot \frac{2}{2} = \frac{3(x-1)}{2(x+1)(x-1)} + \frac{10}{2(x+1)(x-1)} $$
+Rationalise the numerator: $\displaystyle \frac{\sqrt{4+h}-2}{h}$ \\ \break
+We can multiply the numerator and denominator by the conjugate radical $\sqrt{4+h}+2$:
+$$ \frac{\sqrt{4+h}-2}{h} \cdot \frac{\sqrt{4+h}+2}{\sqrt{4+h}+2} = \frac{(\sqrt{4+h})^2-2^2}{h(\sqrt{4+h}+2)} = \frac{4+h-4}{h(\sqrt{4+h}+2)} = \frac{h}{h(\sqrt{4+h}+2)} = \frac{1}{\sqrt{4+h}+2}$$
+Here what we did is that we multiplied the numerator and denominator by the conjugate radical $\sqrt{4+h}+2$, then we simplified the numerator by using the Special Product Formula 1, and then we simplified the fraction.
 
-Notice that now we have the common denominator. Now we can add the numerators together and keep the denominator. So we have:
 
-$$ \frac{3(x-1)+10}{2(x+1)(x-1)} = \frac{3x-3+10}{2(x+1)(x-1)} = \frac{3x+7}{2(x+1)(x-1)} $$
-Now we can't simplify this any further because the numerator and denominator don't have any common factors.
+\subsection{Avoid Common Errors}
+Don’t make the mistake of applying properties of multiplication to the operation of addition.
+Many of the common errors in algebra involve doing just that. The following table states
+several properties of multiplication and illustrates the error in applying them to addition.
+
+\begin{align*}
+    \includegraphics{algebra-pre-calculus/rational-expressions/common_errors.png}
+\end{align*}
+
+To verify that the equations in the right-hand column are wrong, simply substitute
+numbers for a and b and calculate each side.
