@@ -1,3 +1,4 @@
+\label{sec:equations}
 \section{Equations}
 An equation is a statement that two mathematical expressions are equal. For example,
 \begin{equation}
@@ -20,7 +21,7 @@ the symbol 3 means “is equivalent to.”)
 \end{align*}
 
 
-\section{Solving Quadratic Equations}
+\subsection{Solving Quadratic Equations}
 \label{sec:quadratic-equations}
 A quadratic equation is an equation that's highest exponent/power is 2. It can be written in the form of $ax^2+bx+c=0$ where $a,b,c$ are constants representing real numbers and $a \neq 0$. In this section we will go over how to solve quadratic equations.
 
@@ -109,14 +110,89 @@ The steps to solve quadratic equations are:
     \item Factor the equation or use the quadratic formula. Because factoring is not always possible, but the quadratic formula always works. Therefore, you can't really lose by using the quadratic formula, however sometimes it is easier and faster to factor the equation.
 \end{enumerate}
 
+The quantity $b^2-4ac$ is called the \textbf{discriminant} of the quadratic equation $ax^2+bx+c=0$ and is denoted by the symbol $D$. If $D>0$, then the equation has two real solutions. If $D=0$, then the equation has one real solution. If $D<0$, then the equation has no real solutions. 
+
+\begin{align*}
+    \includegraphics[width=1.1\textwidth]{algebra-pre-calculus/equations/discriminant.png}
+\end{align*}
+
 \subsection{Solving quadratic equations by completing the square}
 If a quadratic equation does not factor readily, then we can solve it using the technique of \textbf{completing the square}.
 This means that we add a constant to an expression to make it a perfect square. For example, to make $x^2-6x$ a perfect square, we must add $9$, since $(x-3)^2=x^2-6x+9$. \\
 Being aware of the standard form: $ax^2+bx+c=0$:
 
 \begin{align*}
-    \includegraphics[width=1.3\textwidth]{algebra-pre-calculus/equations/completing_square.png}
+    \includegraphics[width=1.1\textwidth]{algebra-pre-calculus/equations/completing_square.png}
 \end{align*}
 
 \textbf{(a)} $x^2-8x+13=0$
-\textbf{()}
+
+\begin{align*}
+    x^2-8x+13&=0 \\
+    x^2-8x&=-13 \quad  \color{blue}\text{Subtract 13} \\ 
+    x^2-8x+\color{blue}{16}&=-13+\color{blue}{16} \quad \color{blue}\text{Complete the square: add} \ \left(\frac{-8}{2}\right)^2\\
+    (x-4)^2&=3 \quad  \color{blue}\text{Perfect square} \\
+    x-4&=\pm\sqrt{3} \quad  \color{blue}\text{Take square root} \\
+    x&=4\pm\sqrt{3} \quad  \color{blue}\text{Add 4}
+\end{align*}
+
+\textbf{(b)} $3x^2-12x+6=0$
+
+\begin{align*}
+    3x^2-12x+6&=0 \\
+    3x^2-12x&=-6 \quad  \color{blue}\text{Subtract 6} \\ 
+    3(x^2-4x)&=-6 \quad \color{blue}\text{Factor 3}\\
+\end{align*}
+Now we complete the square by adding $\displaystyle\left(\frac{-4}{2}\right)^2=4$ \textbf{inside the parentheses}. Since everything inside the parentheses is multiplied by 3, this means that we are actually adding $3\cdot4=12$ to the left side of the equation. Therefore, we must also add $12$ to the right side of the equation to keep it equal.
+
+\begin{align*}
+    3(x^2-4x+4)&=-6+12 \quad \color{blue}\text{Complete the square: add} \ 4 \\
+    3(x-2)^2&=6 \quad  \color{blue}\text{Perfect square} \\
+    (x-2)^2&=2 \quad  \color{blue}\text{Divide by 3} \\
+    x-2&=\pm\sqrt{2} \quad  \color{blue}\text{Take square root} \\
+    x&=2\pm\sqrt{2} \quad  \color{blue}\text{Add 2}
+\end{align*}
+
+\subsection{Solving A Fourth-Degree Equation of Quadratic Type}
+An equation of the form $aW^2+bW+c=0$, where $W$ is an algebraic expression,
+is an equation of \textbf{quadratic type.} We solve equations of quadratic type by substituting
+for the algebraic expression, as we see in the next two examples. 
+
+\textbf{(a)} Find all real solutions of the equation $x^4-8x^2+8=0$.
+
+If we go ahead and set the $W$ variable to $x^2$, we get the equation $W^2-8W+8=0$.
+
+In other words, in our equation we can solve it as so,
+
+
+\begin{align*}
+   &(x^2)^2-8x^2+8=0 \quad \color{blue}\text{Write} \ x^4 \text{as} (x^2)^2 \\
+   &W^2-8W+8=0 \quad \color{blue}\text{Substitute} \ W=x^2 \\
+   &W=\frac{8\pm\sqrt{(-8)^2-4(1)(8)}}{2(1)} \quad \color{blue}\text{Use the quadratic formula} \\
+   &x^2=4\pm2\sqrt{2} \quad \color{blue}W=x^2 \\
+   &x=\pm\sqrt{4\pm2\sqrt{2}} \quad \color{blue}\text{Take square root} \\
+\end{align*}
+
+So there are four solutions: $x=\sqrt{4+2\sqrt{2}}$, $x=-\sqrt{4+2\sqrt{2}}$, $x=\sqrt{4-2\sqrt{2}}$, and $x=-\sqrt{4-2\sqrt{2}}$.
+
+\subsection{Fractional Power Equations - Quadratic Type}
+
+Find all solutions of the equation $x^{\frac{1}{3}}+x^{\frac{1}{6}}-2=0$
+
+This equation is of quadratic type because if we let $W=x^{\frac{1}{6}}$, then
+$W^2=x^{\frac{1}{3}}$. So we can solve the equation as so,
+
+\begin{align*}
+    &W^2 + W - 2 = 0 \quad \text{\color{blue} Substitute } W = x^{1/6} \\
+    &(W - 1)(W + 2) = 0 \quad \text{\color{blue} Factor} \\
+    &\begin{aligned}
+        W - 1 &= 0 \hspace{2cm}  W + 2= 0 \\
+        W &= 1 \hspace{2cm}  W= -2 \\
+        x^{1/6} &= 1 \hspace{2cm}  x^{1/6}= -2 \\	
+        x &= 1^6 \hspace{2cm}  x= (-2)^6 \\
+        x &= 1 \hspace{2cm}  x= 64 \\
+    \end{aligned}
+\end{align*}
+
+From \textbf{Check Your Answers} we see that $x=1$ is a solution but $x=64$ is not. The only
+solution is $x=1$.
