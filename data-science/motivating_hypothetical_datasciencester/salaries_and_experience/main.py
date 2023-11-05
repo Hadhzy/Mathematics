@@ -68,3 +68,29 @@ print(average_salary_by_bucket)
     this allows us to make predictions about salaries that we don’t know. We’ll
     explore this idea later.
 """
+
+"""
+    It is very important to be aware and keep using the assert keyword.
+    It is a good
+    practice, and I strongly encourage you to make liberal use of it in your own
+    code. (If you look at the book’s code on GitHub, you will see that it
+    contains many, many more assert statements than are printed in the book.
+    This helps me be confident that the code I’ve written for you is correct.)
+"""
+
+x = 1
+assert x > 0, "x is not positive"
+
+"""
+    Often we will need to zip two or more iterables together. The zip function
+    transforms multiple iterables into a single iterable of tuples of
+    corresponding function:
+"""
+
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+
+# [pair for pair in zip(list1, list2)]
+pairs = [('a', 1), ('b', 2), ('c', 3)]
+letters, numbers = zip(*pairs)
+print(list(zip(*pairs)))  # unzip
