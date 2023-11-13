@@ -10,3 +10,6 @@ main.synctex(busy)
 indent.log
 venv
 .idea
+__pycache__
+out
+auxil
