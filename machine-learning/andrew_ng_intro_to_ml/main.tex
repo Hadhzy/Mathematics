@@ -196,5 +196,137 @@ This is how you can use the cost function to identify the best fitting slope $w$
 Obviosuly we could have gotten further by having the y-intercept $b$ as a parameter but let's leave that to the next sections. 
 
 In summary, we have conducted that the goal of linear regression is to choose values for $w$ and $b$ that results the cost function $J$ to be the smallest value possible. 
+In order to find the best values for $w$ and $b$ we have to introduce the idea of gradient descent
 
-Now let's go through the model representation section 2 cost function
+\subsection{Gradient Descent}
+Obviosuly our goal would be to find a systematic way of finding values for $w$ and $b$ that fits the data perfectly or results with the smallest possible cost $J$.
+Gradient descent (GD) is an iterative first-order optimisation algorithm, used to find a local minimum/maximum of a given function. This method is commonly used in machine learning (ML) and deep learning (DL) to minimise a cost/loss function (e.g. in a linear regression).
+Here is an overview of what we would want to achieve: 
+\begin{itemize}
+  \item We have the function $J(w,b)$, gradient descent can be used to minimize not just the cost function but any given function. 
+  \item Our goal is to minimize it as min $J(w,b)$
+  \item \textbf{Outline: } So this is how it works: 
+  \begin{enumerate}
+    \item Start with some initial guesses for $w$ and $b$, it wouldn't matter that what would you start off with but it's a convention to start off with both $w=0$ and $b=0$
+    \item Then what you will do is you will keep changing $w,b$ to reduce $J(w,b)$
+    \item Until we settle at or near a local minimum which may be more than 1.
+  \end{enumerate}
+\end{itemize}
+
+\subsection{Gradient Descent Mathematically}
+So this is how it looks: 
+$$\displaystyle w=w-\alpha \frac{d}{dw}J(w,b) $$
+Let's unpack the details of this equation. \\
+First the equal notation $=$ in this case is an assignment operator. So we are going to take the value of $w-\alpha \frac{d}{dw}J(w,b)$ and store it in the variable $w$, this is thinking programatically
+Because if we think matematically we claim that $w$ is equal to $w-\alpha \frac{d}{dw}J(w,b)$ which is not true, we are storing the value of $w-\alpha \frac{d}{dw}J(w,b)$ in the variable $w$. In conclusion the equal sign can be used for either assignment or truth assertion.
+Let's unpack the different symbols in this equation: 
+\begin{itemize}
+  \item $\alpha$ which is a greek letter, in this case the alpha is the \textbf{learning rate} which is a very small positive number such as 0.01, 0.001, 0.0001, between 0-1.
+  $\alpha$ will determine how big of a step we take downhill on each iteration. By extension if its relatively big then we will take a big step downhill, if it's relatively small then we will take a small step downhill.
+  Downhill means that we are trying to reduce the value of $J(w,b)$.
+  We will go deeper in terms of choosing a good value for $\alpha$
+  \item $\frac{d}{dw}J(w,b)$ is the derivative of the cost function $J(w,b)$ with respect to $w$. However we are going to talk about this in much more detail. You can think of the derivative as the direction and magnitude of the steps.
+\end{itemize}
+
+You have another parameter which is $b$ and you can update it in a similar way:
+$$\displaystyle b=b-\alpha \frac{d}{db}J(w,b) $$
+
+As a detail you want to make sure that you are updating $w$ and $b$ simultaneously, meaning that you want to update them at the same time. Also you are updating them from their old values, so you are not updating $w$ and $b$ from the original values but rather from their old values.
+
+
+Here is the correct and incorrect way of updating $w$ and $b$:
+\begin{align*}
+  \includegraphics[width=1\textwidth]{machine-learning/andrew_ng_intro_to_ml/gradient_descent_implementation.png}
+\end{align*}
+\subsection{More deeply about gradient descent} 
+so here is the gradient descent algorithm: 
+$$ w=w-\alpha \frac{\partial L}{\partial w}$$
+where $\alpha$ is the learning rate, and $\frac{\partial L}{\partial w}$  is the derivative term
+and also for b: 
+$$ b=b-\alpha \frac{\partial}{\partial w}$$
+where $\frac{\partial}{\partial b}$ is the derivative term \\
+
+Just for the sake of simplicity let's assume that we are only dealing with $w$ and not $b$.
+So our cost function would turn into $J(x)$ and our algorithm would change into: 
+$$ w=w-\alpha \frac{\partial J}{\partial w}$$
+
+Let's look and talk about this diagram: 
+\begin{align*}
+  \includegraphics[width=1\textwidth]{machine-learning/andrew_ng_intro_to_ml/gradient_descent_visualisation.png}
+\end{align*}
+
+Now as a remainder our goal is to find the $w$ where the $J(x)$ is the smallest. Gradient descent helps us find the local minimum of the cost function $J(x)$.
+Looking at the first example we have started off with a random example then what the derivative does is it uses something called the tangent line to find the slope of the line at that point.
+The tangent line is a line that touches the curve at that point. As we can see we are getting back 2 which means that it is a positive number. 
+We know that the learning rate $\alpha$ is a positive number, so looking into the subtraction its obvious that we are going to reduce the value of $w$.
+By extension we are going backwards which proves the gradient descent functionality as we are getting closer to the local minimum. 
+Now let's look at the second example where we are getting a negative number and when we subtract a negative number we essentially are adding a positive number which is going to increase the value of $w$, so we are going to go forward, which again proves the gradient descent as we are getting closer to the local minimum. 
+
+In summary the derivative term will use the tangent line to find the slope of the curve at a given point, then we use that slope to find the direction of the step that gets us closer to the local minimum. Now the last thing that we don't really understand is the learning rate $\alpha$.
+
+\subsection{Learning rate}
+The value of $\alpha$ has a huge impact on the efficiency of the gradient descent. If it is chosen poorly then the gradient descent might not work at all. 
+
+To understand the impact and the significance of the learning rate let's look at what happens when it's either too big or when it's too small. 
+
+\begin{align*}
+  \includegraphics[width=1\textwidth]{machine-learning/andrew_ng_intro_to_ml/learning_rate_big_small.png}
+\end{align*}
+
+Now if the learning rate is too small then the gradient descent will take a long time to converge, meaning that it will take a long time to find the local minimum.
+However we will still find the minimum, it will just take a long time.
+When the learning rate is too big then the gradient descent might not converge at all, meaning that it might not find the local minimum. This can happen when the learning rate is too big and it goes over the local minimum and it stucks in a loop.
+
+Now one thing to mention is what happens when the gradient descent reaches the local minimum. 
+Let's look at this diagram: 
+\begin{align*}
+  \includegraphics[width=1\textwidth]{machine-learning/andrew_ng_intro_to_ml/local_minimum_validation.png}
+\end{align*}
+
+As you can see when the gradient descent reaches the local minimum the derivative will be 0, so when we multiply it by the learning rate $\alpha$ it will be 0, and when subtractng 0 from $w$ it will be the same value.
+In conclusion when we reach a local minimum further gradient descent steps will do absolutely nothing, so we can stop the gradient descent when we reach a local minimum.
+
+Let's look at another concept that how gradient descent can reac local minimum with fixed learning rate. 
+\begin{align*}
+  \includegraphics[width=1\textwidth]{machine-learning/andrew_ng_intro_to_ml/local_minimum_fixed_learning_rate.png}
+\end{align*}
+
+As we can see when we take the first step, the slope of the tangent line at that point is really big, therefore we are taking a big step. 
+As we are taking the steps the slope of the tangent line is getting smaller and smaller, therefore we are taking smaller and smaller steps. 
+When we reach the local minimum the slope of the tangent line is 0, therefore we are not taking any steps.
+This explains that whenever we are approaching the local minimum the steps are getting smaller and smaller, because the slope is smaller, then the derivative is smaller and $w$ is smaller so we are taking a smaller step.
+In conclusion the gradient descent can reach the local minimum without decreasing the learning rate $\alpha$.
+
+\subsection{Put it all together - Gradient Descent for Linear Regression}
+Now let's put it all together and see how we can use gradient descent to find the best fitting line for our data-set.
+Recall that we have the following model: $$ f_{w,b}(x) = wx + b $$
+We have the following cost function: $$ J_{(w,b)}=\frac{1}{2m}\sum_{i=0}^{m}\ (f_w,b(x^{(i)})-y^{(i)})^2 $$
+And we have the following gradient descent algorithm:
+$$ w=w-\alpha \frac{\partial}{\partial w}J(w,b)$$
+$$ b=b-\alpha \frac{\partial}{\partial b}J(w,b)$$
+
+
+\subsection{Calculate the derivative terms}
+
+We have this derivative with respect to $w$:
+$$ \frac{\partial}{\partial w}J(w,b)$$
+We start by plugging in the definition of $J(w,b)$:
+$$ \frac{\partial}{\partial w}J(w,b)=\frac{\partial}{\partial w}\frac{1}{2m}\sum_{i=0}^{m}\ (f_w,b(x^{(i)})-y^{(i)})^2$$
+Remember that $f_w,b(x^{(i)})$ is the same as $wx^{(i)}+b$ so we can substitute that in:
+$$ \frac{\partial}{\partial w}J(w,b)=\frac{\partial}{\partial w}\frac{1}{2m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})^2$$
+We know that the derivative is equal to will be equal to $2x^{(i)}$ so we can substitute that in:
+$$ \frac{\partial}{\partial w}J(w,b)=\frac{1}{m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})x^{(i)}$$
+Let's do the same thing for $b$:
+$$ \frac{\partial}{\partial b}J(w,b)=\frac{\partial}{\partial b}\frac{1}{2m}\sum_{i=0}^{m}\ (f_w,b(x^{(i)})-y^{(i)})^2$$
+and we can substitute $f_w,b(x^{(i)})$ with $wx^{(i)}+b$:
+$$ \frac{\partial}{\partial b}J(w,b)=\frac{\partial}{\partial b}\frac{1}{2m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})^2$$
+We know that the derivative is equal to will be equal to $2$ so we can substitute that in:
+$$ \frac{\partial}{\partial b}J(w,b)=\frac{1}{m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})$$
+
+Now that we know this we can apply them to the gradient descent algorithm:
+repeat until convergence \{
+$$ w=w-\alpha \frac{1}{m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})x^{(i)}$$
+$$ b=b-\alpha \frac{1}{m}\sum_{i=0}^{m}\ (wx^{(i)}+b-y^{(i)})$$
+\}
+
+\subsection{Running and applying gradient descent}

@@ -1,0 +1,5 @@
+setup.py
+motivating_hypothetical_datasciencester.egg-info/PKG-INFO
+motivating_hypothetical_datasciencester.egg-info/SOURCES.txt
+motivating_hypothetical_datasciencester.egg-info/dependency_links.txt
+motivating_hypothetical_datasciencester.egg-info/top_level.txt
