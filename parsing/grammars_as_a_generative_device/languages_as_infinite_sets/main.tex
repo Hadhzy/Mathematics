@@ -1,0 +1,96 @@
+\section{Introduction}
+In short words parsing is the process of structuring lineasr representation in accordance with a given grammar. This definition has been deliberately has been kept abstract to allow many different interpretations of the term parsing.
+
+\section{Grammars as a Genereting Device}
+\subsection{Languages as Infinite Sets}
+A language can be described as a set of letters, forming words and sentences. The set of letters is called the alphabet of the language. The set of words is called the vocabulary of the language.
+The computer science view here is that yes, a language has sentences which are possessing the structure of the language. 
+He calls the words of the language as tokens, each token carry a significant information and has a piece of information, which is its contribution to the meaning of the whole sentence. 
+To the computer scientist, the language is an infinitely large set of tokens, in such way that it has a structure; 
+The tokens and the structure will provide the meaning of the sentence. For example $3+4\cdot5$ is sentence in the language of arithmetics.
+Its structure can be shown by inserting parentheses: $3+(4\cdot5)$. The meaning of the sentence is the number 23.
+
+\subsection{Grammars}
+Grammars are used to describe the structure of languages. The grammar of a language is a formal description of the language. 
+Good grammars make a careful distincton between the sentence/word level, which they refer to as the syntax of the language, and the meaning of the sentence/word, which they refer to as the semantics of the language.
+The grammars mathematically are a finite set of rules, which can be used to generate infinite set of sentences.
+
+\subsection{Languages are Infinite Bit-Strings}
+Let's call the alphabet of a language as $\Sigma$. The simplest example of a language that implements the alphabet $\Sigma$ is that which consists of all words that can be made by combining letters from the alphabet. 
+
+For example: 
+$$ \Sigma = \{a,b\} $$
+We get the language: 
+$$ \{ ,a,b,aa,ab,ba,bb,aaa,aab,aba,abb,baa,bab,bba,bbb,aaaa,...\} $$
+We can refer to this language as $\Sigma^*$, which is the set of all words that can be made by combining letters from the alphabet $\Sigma$.
+The first word in the language is the empty word, which is the word that contains 0 a's and 0 b's. The empty word is denoted by $\epsilon$.
+All languages made from the alphabet $\Sigma$ are subsets of $\Sigma^*$. That means that if we were to have antoher language, say $L$ which is the set of all words that contain more a's than b's, then $L$ is a subset of $\Sigma^*$.
+
+\subsection{Describing a Language through a Finite Recipe}
+A good way to approach to build a set of objects is to start from a small set of objects and then apply a set of rules to generate new objects.
+Suppose that we want to generate the set of all enumarations of names, of type "Tom,Harry and Bob" in which all names but the last two are seperated by commas.
+We can start by defining the set of all names:
+$$ N = \{Tom,Harry,Bob\} $$
+We can describe the rules with first words: 
+\begin{enumerate}
+    \item Tom is a name, Harry is a name, Bob is a name.
+    \item a name is a sentence
+    \item a sentence followed by a comma and a name is a sentence
+    \item before finishing it, if the sentence ends in a comma and a name, then replace it with the sentence followed by "and" and a name.
+\end{enumerate}
+
+There is a very important terminology here, which is the \textbf{nonterminal} and the \textbf{terminal} symbols.
+The nonterminal symbols are the symbols that are used to describe the structure of the language. The terminal symbols are the symbols that are used to describe the vocabulary of the language.
+This means that nonterminals are defining the different structures that the language can have, for example in the above example, the nonterminal is the sentence, name and so on. 
+The terminal symbols are the symbols that are used to describe the vocabulary of the language, for example in the above example, the terminal symbols are Tom, Harry, Bob, which are the actual values that the language can accept. 
+To distinguish between the nonterminal and the terminal symbols, we use the convention that the nonterminal symbols are written in capital letters and the terminal symbols are written in lowercase letters. \\
+Therefore we can replace the above rules with the following:
+
+\begin{enumerate}
+    \item Name may be replaced by Tom, Harry or Bob
+    \item Sentence may be replaced by a name
+    \item Sentence may be replaced by Sentence,Name (This rule is called the recursive rule)
+    \item ",Name" at the end of a Sentence must be replaced by "and Name"
+    \item A sentence is finished when it no longers contains a nonterminal symbol. 
+    \item we start out our replacement process with the nonterminal symbol Sentence.
+\end{enumerate}
+
+Clause 0 through 3 are called the \textbf{production rules} of the grammar. The production rules are used to generate the language.
+Clause 4 is not specfic to this grammar. It is valild generally and is one of the rules of the game. Clause 5 tells us where to start generating, which we refer to as the \textbf{start symbol} of the grammar and is denoted by $S$.
+Start symbol is required for every grammar. Clause 3 looks a bit different as instead of using "may be replaced by" we use "must be replaced by" and it refers to the end of the sentence. 
+The way we identify the end of the sentence is by adding an endmarker after it. The endmarker is a special symbol that is not part of the alphabet of the language.
+
+Therefore here is the grammar that we have built:
+\begin{enumerate}
+    \item Name $\rightarrow$ Tom
+    \item Name $\rightarrow$ Bob
+    \item Name $\rightarrow$ Harry
+    \item Sentence $\rightarrow$ Name
+    \item Sentence $\rightarrow$ List End
+    \item List $\rightarrow$ Name
+    \item List $\rightarrow$ List,Name
+    \item , Name End $\rightarrow$ and Name
+\end{enumerate}
+
+To emphasize the idea of the endmarker, the book mentions that the key idea is to restrict the use of the end marker in a way that it can only be used in the required replacement from ",Name" to "and Name."
+By making the end marker a non-terminal that can only be used in this specific replacement, the grammar ensures that the replacement test is performed before considering a sentence finished.
+When a sentence has ",Name End" it signifies that the sentence has been finished, however the idea of clause 3 is that the sentence is not finished until the replacement has been performed. 
+In other words, the presence of ",Name End," signals that the sentence is potentially at its end, but it is not finalised until the specified replacement is performed. 
+
+\subsection{The Significance of the Recursive Rule}
+A recursive rule applied in grammars is a rule that refers back to itself either directly or indirectly.
+
+\textbf{Direct Recursion:} A rule is directly recursive if the nonterminal on the left-hand side of the rule is also present on the right-hand side of the rule. In other words a non-terminal directly refers to itself in its production rule. 
+For example: 
+$$ A \rightarrow A \ \text{alpha} \ | \ \text{beta} $$ The rule states that A can be replaced by A followed by alpha or it can be the terminal beta.
+It means that we can replace A with A followed by alpha, and if you apply this rule repeatedly(recursively), you can have sequences like A alpha alpha, A alpha alpha alpha, and so on. \\ 
+
+\textbf{Indirect Recursion:} A rule is indirectly recursive if the nonterminal on the left-hand side of the rule is present on the right-hand side of the rule, but not directly. In indirect recursion, a non-terminal refers to another non-terminal, creating a chain or loop of references. \\
+For example: 
+$$ A \rightarrow B \ \textnormal{beta} $$
+$$ B \rightarrow A \ \textnormal{alpha} \ | \ \textnormal{gamma} $$
+
+The first rule states that A can be replaced by B followed by beta. The second rule states that B can be replaced by A followed by alpha or it can be replaced by gamma.
+This creates an indirect recursion, because A refers to B and B refers back to A. The expansion $A \rightarrow B$ beta means that you replace A with B beta, and then B can be expanded into A alpha, creating a loop or cycle of expansions.
+
+

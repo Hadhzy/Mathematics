@@ -1,0 +1,62 @@
+\section{Formal Grammars}
+The above recipe form, based on replacement according to rules, is strong enough
+to serve as a basis for formal grammars. Similar forms, often called “rewriting systems”, have a long history among mathematicians, and were already in use several
+centuries B.C. in India (see, for example, Bhate and Kak [411]). The specific form
+of Figure 2.3 was first studied extensively by Chomsky [385]. His analysis has been
+the foundation for almost all research and progress in formal languages, parsers and
+a considerable part of compiler construction and linguistics.
+
+\subsection{Formalism of Formal Grammars}
+A formal grammar is a set of rules for generating a language. Work in this field has been done with a specific notation. 
+We shall start with some mathematic notation, which is used for correctness and proofs and not necessarily to understand the principles.
+
+\begin{definition}
+    A \textbf{generative grammar} is a 4-tuple $(V_N, V_T, R, S)$ such that \\
+    (1) $V_N$ and $V_T$ is a finite set of symbols \\ 
+    (2) $V_N \cap V_T = \emptyset$ \\
+    (3) $R$ is a finite set of pairs $(P,Q)$ such that \\
+        (3a) $P \in (V_N \cup V_T)^+$ \\
+        (3b) $Q \in (V_N \cup V_T)^*$ \\
+    (4) $S \in V_N$ is the start symbol
+\end{definition}
+
+Explanation of the above definition: 
+$V_N$ is a finite set of non-terminal symbols. $V_T$ is a finite set of terminal symbols. The two sets are disjoint, meaning that they their intersection is an empty set.
+This makes sense as terminals and non-terminals should have no elements in common. \\
+$R$ is a finite set of pairs $(P,Q)$, and is the set of all rules. $P$ and $Q$ are strings of terminals and non-terminals. Each $P$ by the definiton  must consist of sequences of one or more non-terminals
+and terminals and each $Q$ must consist of sequences of zero or more non-terminals and terminals.  \\
+Therefore our $R$ grammar set looks like: 
+$$R = {(Name, tom), (Name, dick), (Name, harry), \\
+(Sentence, Name), (Sentence, List End), (List, Name), \\
+(List, List , Name), (, Name End, and Name)}$$
+
+For our start symbol $S$ we state that it must be an element of $V_N$ so it must be a non-terminal: 
+$$S=\textnormal{Sentence}$$
+This concludes our field trip into formal linguistics. In short, the mathematics of
+formal languages is a language, a language that has to be learned; it allows very concise expression of what and how but gives very little information on why. Consider
+this book a translation and an exegesis.
+
+\subsection{Generating Sentences from a Formal Grammar}
+For the above grammar we can introduce a more compact notation. The right-hand sides seperated by vertical bars "|" are called alternatives. 
+Therefore our grammar becomes: 
+
+\begin{enumerate}
+    \item $\text{Name} \rightarrow \text{tom} \mid \text{harry} \mid \text{bob} $
+    \item $\text{Sentence} \rightarrow \text{Name} \mid \text{List End} $
+    \item $\text{List} \rightarrow \text{Name} \mid \text{Name, List} $
+    \item $\text{', Name End'} \rightarrow \text{and Name} $
+\end{enumerate}
+
+
+\subsection{Exercises}
+
+\begin{enumerate}
+    \item By the definiton of a generative grammar, why must $V_N$ and $V_T$ be disjoint?
+    \item What will happen if $V_N$ and $V_T$ are not disjoint and they have intersected element(s)?
+    \item What is the difference between $V_N$ and $V_T$?
+    \item What is the difference between $P$ and $Q$?
+    \item What does $R = {(P,Q)}$ mean?
+    \item Define direct and indirect recursion. Provide examples as well.
+    \item Explain the significance of the end marker. Why is it important?
+    \item What is the notation to distinguish between the nonterminal and the terminal symbols?
+\end{enumerate}
